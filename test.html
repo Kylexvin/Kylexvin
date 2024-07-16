@@ -1,0 +1,80 @@
+<section class="scrollable-section">
+  <div class="profile-picture" id="neomorphism">
+    <img src="profile.jpg" alt="Profile Picture">
+    <ul class="wrapper">
+      <a href="https://www.facebook.com/vinny.kylex.1">
+        <li class="icon facebook">
+          <span><i class="fab fa-linkedin"></i></span>
+        </li>
+      </a>
+      <a href="https://wa.me/254768610613">
+        <li class="icon youtube">
+          <span><i class="fab fa-github"></i></span>
+        </li>
+      </a>
+      <a href="https://wa.me/254768610613">
+        <li class="icon youtube">
+          <span><i class="fab fa-dribbble"></i></span>
+        </li>
+      </a>
+    </ul>
+  </div>
+  <div class="intro-card">
+    <h1 id="intro-text">My name is Vinny Kylex<br> <span id="dynamic-text"></span></h1>
+  </div>
+  <!-- The floating orbs will be dynamically added here by JavaScript -->
+</section>
+
+<style>
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+  pointer-events: none;
+  animation: float-animation 15s infinite ease-in-out;
+}
+
+@keyframes float-animation {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-20px, 20px) rotate(90deg); }
+  50% { transform: translate(20px, -20px) rotate(180deg); }
+  75% { transform: translate(20px, 20px) rotate(270deg); }
+}
+</style>
+
+<script>
+// Your existing JavaScript code here
+
+// Function to create floating orbs
+function createFloatingOrbs() {
+  const section = document.querySelector('.scrollable-section');
+  const orbCount = 20; // Number of orbs
+
+  for (let i = 0; i < orbCount; i++) {
+    const orb = document.createElement('div');
+    orb.classList.add('floating-orb');
+    
+    // Random size
+    const size = Math.random() * 50 + 10; // 10-60px
+    orb.style.width = `${size}px`;
+    orb.style.height = `${size}px`;
+    
+    // Random position
+    orb.style.left = `${Math.random() * 100}%`;
+    orb.style.top = `${Math.random() * 100}%`;
+    
+    // Random color
+    const hue = Math.random() * 360;
+    orb.style.backgroundColor = `hsla(${hue}, 100%, 50%, 0.3)`;
+    
+    // Random animation duration and delay
+    orb.style.animationDuration = `${Math.random() * 10 + 5}s`; // 5-15s
+    orb.style.animationDelay = `${Math.random() * 5}s`;
+
+    section.appendChild(orb);
+  }
+}
+
+// Call the function when the page loads
+window.addEventListener('load', createFloatingOrbs);
+</script>

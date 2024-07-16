@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills Bubbles</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.bubbles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.bubble span {
+  display: block;
+  padding: 10px;
+}
+
+.bubble.html { background-color: #e34c26; }
+.bubble.css { background-color: #264de4; }
+.bubble.js { background-color: #f7df1e; color: #000; }
+.bubble.react { background-color: #61dafb; color: #000; }
+.bubble.node { background-color: #68a063; }
+</style>
+</head>
+<body>
+
+<div class="bubbles-container">
+  <div class="bubble html" style="width: 120px; height: 120px;"><span>HTML</span></div>
+  <div class="bubble css" style="width: 100px; height: 100px;"><span>CSS</span></div>
+  <div class="bubble js" style="width: 140px; height: 140px;"><span>JavaScript</span></div>
+  <div class="bubble react" style="width: 130px; height: 130px;"><span>React</span></div>
+  <div class="bubble node" style="width: 110px; height: 110px;"><span>Node.js</span></div>
+</div>
+
+</body>
+</html>

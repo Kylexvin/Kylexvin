@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vinny Kylex</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" referrerpolicy="no-referrer">
+<style>
+    
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Scrollable Section Styles */
+.scrollable-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background:#0a0b13;
+}
+
+/* Profile Picture and Intro Card Styles */
+.profile-picture,
+.intro-card {
+  margin: 10px;
+}
+
+/* Profile Picture Styles */
+.profile-picture {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.wrapper a {
+  margin: 0 10px;
+}
+
+.wrapper .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+}
+
+.wrapper .icon span {
+  font-size: 20px;
+}
+
+/* Intro Card Styles */
+#intro-text {
+  margin: 0;
+  color: gold;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.intro-card {
+  background-color: #ffffff;
+  padding: 20px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  font-size: 20px;
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .scrollable-section {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .intro-card {
+    order: -1;
+  }
+}
+
+ .intro-section {
+    text-align: left;
+    padding: 40px;
+    background-color:#0a0b13;
+    color: #fff;
+    background-image: url('dark.jpg');
+    object-fit:cover;
+  }
+
+  .intro-title {
+    font-size: 24px;
+    font-weight: bold;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  .title-card {
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  border-right:0.5px solid gold;
+  border-left:0.5px solid gold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}    
+.gold-text {
+  color: gold;
+  font-weight: bold;
+}
+
+.title-card h1 {
+  color: white;
+  margin: 0;
+  font-size:25px;
+  padding: 10px 0;
+}
+  .intro-description {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .connect-button {
+    margin-top: 20px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+     transition: background-color 0.3s ease-in-out;
+
+    transition: background-color 0.3s ease;
+  }
+
+  .connect-button:hover {
+    background-color: #45a049;
+  }
+
+.highlight {
+    color: #ffcc00; /* Highlight color */
+    padding: 0 5px;
+    font-size:34px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  
+   #skills {
+    background-color: transparent;
+    text-align: center;
+  }
+  
+
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-bar {
+  position: relative;
+  width: 300px;
+  height: 20px;
+  margin-bottom: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: blue;
+  border-radius: 10px;
+  text-align: center;
+  transition: width 1s ease-in-out;
+}
+
+.skill-name {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gold;
+    font-weight: bold;
+  }
+.skills-bubble-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubbles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin:20px;
+}
+
+.bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.bubble span {
+  display: block;
+  padding: 10px;
+}
+
+.bubble.html { background-color: #e34c26; }
+.bubble.css { background-color: #264de4; }
+.bubble.js { background-color: #f7df1e; color: #000; }
+.bubble.react { background-color: #61dafb; color: #000; }
+.bubble.node { background-color: #68a063; }
+    
+    h3{
+    color: gold;
+    weight:bold;
+}  
+
+.education-card {
+  cursor: pointer;
+}
+
+  .education-details {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000000;
+  padding: 20px;
+  Color:white;
+  border: 2px solid gold;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .close-button {
+            background-color: #ffd700;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .close-button:hover {
+            background-color: #b8860b;
+        }
+.education-details h2{
+    color: Blue;
+    font-size:24px;
+}
+.education-card {
+  background-color: #1e233bc9;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.education-card h2{
+    color: gold;
+}
+
+.scrollable-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;  /* Adjust according to your layout */
+  height: 100%; /* Adjust according to your layout */
+}
+
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  animation: float 10s infinite;
+  pointer-events: none;
+  animation: float-animation 30s infinite ease-in-out;
+}
+
+@keyframes float-animation {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-50px, 50px) rotate(90deg); }
+  50% { transform: translate(50px, -50px) rotate(180deg); }
+  75% { transform: translate(50px, 50px) rotate(270deg); }
+}
+
+.resume-download {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #D4AF37; /* Golden color */
+  color: #000000; /* Black text for better contrast on gold */
+  text-decoration: none; /* Removes underline */
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(212, 175, 55, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+text-decoration: none;
+  background-color: #FFD700; /* Brighter gold on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(212, 175, 55, 0.4), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-text {
+  margin-right: 10px;
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.1); /* Slightly darker for the icon background */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover .button-icon {
+  background-color: rgba(0, 0, 0, 0.2); /* Darker on hover */
+}
+
+/* Optional: Add a subtle golden glow on hover */
+.download-button:hover {
+  box-shadow: 0 7px 14px rgba(212, 175, 55, 0.4), 0 3px 6px rgba(0, 0, 0, 0.1),
+              0 0 20px rgba(212, 175, 55, 0.5);
+}
+</style>
+</head>
+<body>
+    
+  <section class="scrollable-section">
+    <div class="profile-picture" id="neomorphism">
+      <img src="profile.jpg" alt="Profile Picture">
+      <ul class="wrapper">
+        <a href="https://www.facebook.com/vinny.kylex.1">
+          <li class="icon facebook">
+            <span><i class="fab fa-linkedin"></i></span>
+          </li>
+        </a>
+        <a href="https://wa.me/254768610613">
+          <li class="icon youtube">
+            <span><i class="fab fa-github"></i></span>
+          </li>
+        </a>
+        <a href="https://wa.me/254768610613">
+          <li class="icon youtube">
+            <span><i class="fab fa-dribbble"></i></span>
+          </li>
+        </a>
+      </ul>
+    </div>
+      <div class="intro-card">
+      <h1 id="intro-text">My name is Vinny Kylex</br> <span id="dynamic-text"></span></h1>
+    </div>
+    
+   
+  </section>
+  
+  
+   <!-- about me -->
+ 
+<section class="intro-section">
+     <div class="resume-download">
+  <a href="path/to/your/resume.pdf" download="YourName_Resume.pdf" class="download-button">
+    <span class="button-text">Download My Resume</span>
+    <span class="button-icon">
+      <i class="fas fa-download"></i>
+    </span>
+  </a>
+</div>
+     <div class="title-card">
+  <h1><span class="gold-text">-</span> ABOUT <span class="gold-text">-</span></h1>
+</div>
+  <h1 class="intro-title">I am<span class="highlight"> Vincent</span>,<br>A PASSIONATE DEVELOPER.</h1>
+  <p class="intro-description">I am an agile full-stack developer with a strong and unwavering passion for technology and a constant desire to learn. I excel at solving complex problems, proficient in both collaborative teamwork and autonomous troubleshooting. I am adept at navigating challenges with an innovative approach, prioritizing contextual understanding. I have effective communication skills, encompassing written and verbal aptitude. I am always curious to acquire knowledge in emerging technologies and leverage my experience to foster innovation and deliver high-quality products.</p>
+  <button class="connect-button">Let's connect</button>
+</section>
+
+      
+       <!-- Other skills -->
+  <section class="scrollable-section">
+   <section id="skills">
+   <div class="skills-section">
+   <div class="title-card">
+  <h1><span class="gold-text">-</span> SKILLS <span class="gold-text">-</span></h1>
+</div>
+  <div class="skills-bubble-div">
+  <div class="bubbles-container">
+    <div class="bubble html" style="width: 120px; height: 120px;"><span>HTML</span></div>
+    <div class="bubble css" style="width: 100px; height: 100px;"><span>CSS</span></div>
+    <div class="bubble js" style="width: 140px; height: 140px;"><span>JavaScript</span></div>
+    <div class="bubble react" style="width: 130px; height: 130px;"><span>React</span></div>
+    <div class="bubble node" style="width: 110px; height: 110px;"><span>Node.js</span></div>
+  </div>
+</div>
+     <h3>Video Editing</h3>
+    <div class="progress-bar" data-progress="80">
+      <div class="progress"></div>
+      <span class="skill-name"></span>
+    </div>
+    <!--  -->
+     <h3>SEO</h3>
+    <div class="progress-bar" data-progress="90">
+      <div class="progress"></div>
+      <span class="skill-name"></span>
+    </div>
+    <!--  -->
+     <h3>Graphics Design</h3>
+    <div class="progress-bar" data-progress="70">
+      <div class="progress"></div>
+      <span class="skill-name"></span>
+    </div>
+    <!--  -->
+  </div>
+</div>
+</section>   
+</section>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"style="transform: rotate(180deg);"><path fill="#0c0d46fe" fill-opacity="1" d="M0,64L30,80C60,96,120,128,180,165.3C240,203,300,245,360,224C420,203,480,117,540,96C600,75,660,117,720,160C780,203,840,245,900,240C960,235,1020,181,1080,181.3C1140,181,1200,235,1260,213.3C1320,192,1380,96,1410,48L1440,0L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg> 
+  <!-- Education -->  
+<section class="education-section">
+    <div class="title-card">
+  <h1><span class="gold-text">-</span> EDUCATION <span class="gold-text">-</span></h1>
+</div>
+<!-- ed 1 -->
+<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails(this)">
+        <h2>Bachelor of Science</h2>
+        <p>September 2021 - Present</p>
+        <p>MOI UNIVERSITY</p>
+        <button class="cta-button">View <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <div class="education-details" id="educationDetails">
+        <h2>Bachelor of Science</h2>
+        <p>As a student pursuing a <strong>Bachelor of Science</strong> in <strong>Mathematics, Physics, Statistics, and Computer Programming</strong>, I've developed a <strong>robust problem-solving</strong> background and expertise in a wide array of subjects. These include <em>mechanics, telecommunications, electronics, power systems, computer engineering, advanced mathematics,</em> and <em>applied physics</em>.</p>
+        <p>This interdisciplinary program has nurtured my <em>critical thinking, objectivity, creativity,</em> and <em>self-discipline</em>. It has also encouraged me to think innovatively, pay attention to detail, and cultivate a broad range of technical skills. My time in this educational journey has been <u>invaluable</u>, urging me to explore beyond the obvious and consider various possibilities.</p>
+        <button class="close-button" onclick="closeDetails()">Close</button>
+    </div>
+
+ 
+
+<div class="education-card animate__animated animate__slideInRight" onclick="showMoreInfo('nodeJs')">
+     <h2>Fundamentals of Computers</h2>
+    <p>April 2018 - July 2018</p>
+    <p>ICS COLLEGE</p>
+    <button class="cta-button">View<i class="fa-solid fa-arrow-right"></i></button>
+</div>
+
+<div class="education-card animate__animated animate__slideInUp" onclick="showMoreInfo('webDev')">
+    <h2>Web Development Bootcamp</h2>
+    <p>March 2021 - July 2021</p>
+    <p>APP BREWERY - DR ANGELA YU</p>
+    <button class="cta-button">View<i class="fa-solid fa-arrow-right"></i></button>
+</div>
+
+<div class="education-card animate__animated animate__slideInUp" onclick="showMoreInfo('fundamentals')">
+    <h2>Node Js Bootcamp</h2>
+    <p>Nov 2021 - March 2022</p>
+    <p>UDEMY - ANDREW MEAD</p>
+    <button class="cta-button">View<i class="fa-solid fa-arrow-right"></i></button>
+</div>
+
+<div class="more-info-card" style="display: none;">
+    <div class="content">
+        <div class="nodeJs-info" style="display: none;">
+            <!-- Node Js Bootcamp info -->
+            <p>In this intensive bootcamp, I delved deep into the world of Node.js and gained comprehensive knowledge about its architecture and event-driven, non-blocking I/O model. </p><p>I acquired practical skills in building server-side applications and APIs, enhancing my ability to create efficient and scalable web applications.</p>
+            <button class="close-btn" onclick="closeMoreInfo('nodeJs')">Close</button>
+        </div>
+        <div class="webDev-info" style="display: none;">
+            <!-- Web Development Bootcamp info -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo euismod mi sed convallis.</p>
+            <button class="close-btn" onclick="closeMoreInfo('webDev')">Close</button>
+        </div>
+        <div class="fundamentals-info" style="display: none;">
+            <!-- Fundamentals of Computers info -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo euismod mi sed convallis.</p>
+            <button class="close-btn" onclick="closeMoreInfo('fundamentals')">Close</button>
+        </div>
+    </div>
+</div>
+</section>
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"style="transform: rotate(180deg);"><path fill="#0c0d46fe" fill-opacity="1" d="M0,64L30,80C60,96,120,128,180,165.3C240,203,300,245,360,224C420,203,480,117,540,96C600,75,660,117,720,160C780,203,840,245,900,240C960,235,1020,181,1080,181.3C1140,181,1200,235,1260,213.3C1320,192,1380,96,1410,48L1440,0L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg> 
+   
+<script>
+const sentences = [
+  "I am passionate about Tech 🥶",
+  "Welcome to my portfolio!"
+];
+
+const dynamicText = document.getElementById("dynamic-text");
+let index = 0;
+let currentSentence = "";
+let isDeleting = false;
+
+function type() {
+  const sentence = sentences[index];
+  if (isDeleting) {
+    currentSentence = sentence.substring(0, currentSentence.length - 1);
+  } else {
+    currentSentence = sentence.substring(0, currentSentence.length + 1);
+  }
+  dynamicText.innerHTML = currentSentence;
+
+  if (!isDeleting && currentSentence === sentence) {
+    isDeleting = true;
+    setTimeout(type, 400);
+  } else if (isDeleting && currentSentence === "") {
+    isDeleting = false;
+    index++;
+    if (index === sentences.length) {
+      index = 0;
+    }
+    setTimeout(type, 500);
+  } else {
+    setTimeout(type, isDeleting ? 100 : 100);
+  }
+}
+
+type();
+
+ // Get all the progress bars
+const progressBars = document.querySelectorAll(".progress-bar");
+
+// Function to animate the progress bars
+function animateProgress() {
+  progressBars.forEach((bar) => {
+    const progress = bar.querySelector(".progress");
+    const targetProgress = bar.getAttribute("data-progress");
+    let currentProgress = 0;
+
+    const intervalId = setInterval(() => {
+      if (currentProgress >= targetProgress) {
+        clearInterval(intervalId);
+      } else {
+        currentProgress++;
+        progress.style.width = `${currentProgress}%`;
+      }
+    }, 10);
+  });
+}
+
+// Check if the skills section is visible in the viewport
+function checkVisibility() {
+  const skillsSection = document.querySelector(".skills-section");
+  const sectionTop = skillsSection.offsetTop;
+  const sectionHeight = skillsSection.offsetHeight;
+  const windowHeight = window.innerHeight;
+  const scrollTop = window.pageYOffset;
+
+  if (scrollTop > sectionTop - windowHeight + sectionHeight / 2) {
+    animateProgress();
+    window.removeEventListener("scroll", checkVisibility);
+  }
+}
+
+window.addEventListener("scroll", checkVisibility);
+checkVisibility();
+
+function showDetails(card) {
+            document.getElementById('educationDetails').style.display = 'block';
+            document.getElementById('educationDetails').classList.add('animate__animated', 'animate__fadeIn');
+        }
+
+        function closeDetails() {
+            document.getElementById('educationDetails').classList.remove('animate__fadeIn');
+            document.getElementById('educationDetails').classList.add('animate__fadeOut');
+            setTimeout(() => {
+                document.getElementById('educationDetails').style.display = 'none';
+                document.getElementById('educationDetails').classList.remove('animate__fadeOut');
+            }, 500);
+        }
+        
+        // Your existing JavaScript code here
+
+// Function to create floating orbs
+function createFloatingOrbs() {
+  const section = document.querySelector('.scrollable-section');
+  const orbCount = 20; // Number of orbs
+
+  for (let i = 0; i < orbCount; i++) {
+    const orb = document.createElement('div');
+    orb.classList.add('floating-orb');
+    
+    // Random size
+    const size = Math.random() * 50 + 10; // 10-60px
+    orb.style.width = `${size}px`;
+    orb.style.height = `${size}px`;
+    
+    // Random position
+    orb.style.left = `${Math.random() * 100}%`;
+    orb.style.top = `${Math.random() * 100}%`;
+    
+    // Random color
+    const hue = Math.random() * 360;
+    orb.style.backgroundColor = `hsla(${hue}, 100%, 50%, 0.3)`;
+    
+    // Random animation duration and delay
+    orb.style.animationDuration = `${Math.random() * 10 + 5}s`; // 5-15s
+    orb.style.animationDelay = `${Math.random() * 5}s`;
+
+    section.appendChild(orb);
+  }
+}
+
+// Call the function when the page loads
+window.addEventListener('load', createFloatingOrbs);
+
+document.querySelector('.download-button').addEventListener('mouseover', function() {
+  this.querySelector('.button-icon').style.transform = 'translateY(3px)';
+});
+
+document.querySelector('.download-button').addEventListener('mouseout', function() {
+  this.querySelector('.button-icon').style.transform = 'translateY(0)';
+});
+</script>
+</body>
+</html>
