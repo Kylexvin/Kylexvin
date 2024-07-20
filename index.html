@@ -7,30 +7,33 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" referrerpolicy="no-referrer">
 <style>
-    
-/* Basic Reset */
+   body {
+    background-image: url('bg.jpg');
+    background-repeat: repeat; /* Ensures the background image repeats */
+    background-size: contain; /* Ensures the background image is contained within the body */
+    background-color: rgba(0, 0, 0, 0.5); /* Sets a black background with 50% opacity */
+    background-position: center; /* Centers the background image */
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Scrollable Section Styles */
 .scrollable-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background:#0a0b13;
+  background: #0a0b13;
 }
 
-/* Profile Picture and Intro Card Styles */
 .profile-picture,
 .intro-card {
   margin: 10px;
 }
 
-/* Profile Picture Styles */
 .profile-picture {
   width: 200px;
   flex-shrink: 0;
@@ -58,6 +61,7 @@
 .wrapper .icon {
   width: 40px;
   height: 40px;
+  color:red;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -69,7 +73,6 @@
   font-size: 20px;
 }
 
-/* Intro Card Styles */
 #intro-text {
   margin: 0;
   color: gold;
@@ -94,7 +97,6 @@
   width: 100%;
 }
 
-/* Media Queries for Responsive Design */
 @media (min-width: 768px) {
   .scrollable-section {
     flex-direction: row;
@@ -107,30 +109,32 @@
   }
 }
 
- .intro-section {
-    text-align: left;
-    padding: 40px;
-    background-color:#0a0b13;
-    color: #fff;
-    background-image: url('dark.jpg');
-    object-fit:cover;
-  }
+.intro-section {
+  text-align: left;
+  padding: 40px;
+  background-color: #0a0b13;
+  color: #fff;
+  background-image: url('dark.jpg');
+  object-fit: cover;
+}
 
-  .intro-title {
-    font-size: 24px;
-    font-weight: bold;
-    animation: fadeInUp 1s ease-in-out;
-  }
-  .title-card {
+.intro-title {
+  font-size: 24px;
+  font-weight: bold;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.title-card {
   background-color: black;
   text-align: center;
   padding: 10px;
   margin: 20px;
   border-radius: 10px;
-  border-right:0.5px solid gold;
-  border-left:0.5px solid gold;
+  border-right: 0.5px solid gold;
+  border-left: 0.5px solid gold;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}    
+}
+
 .gold-text {
   color: gold;
   font-weight: bold;
@@ -139,45 +143,44 @@
 .title-card h1 {
   color: white;
   margin: 0;
-  font-size:25px;
+  font-size: 25px;
   padding: 10px 0;
 }
-  .intro-description {
-    font-size: 18px;
-    margin-top: 20px;
-  }
 
-  .connect-button {
-    margin-top: 20px;
-    background-color: blue;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-     transition: background-color 0.3s ease-in-out;
+.intro-description {
+  font-size: 18px;
+  margin-top: 20px;
+}
 
-    transition: background-color 0.3s ease;
-  }
+.connect-button {
+  margin-top: 20px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
+}
 
-  .connect-button:hover {
-    background-color: #45a049;
-  }
+.connect-button:hover {
+  background-color: #45a049;
+}
 
 .highlight {
-    color: #ffcc00; /* Highlight color */
-    padding: 0 5px;
-    font-size:34px;
-    border-radius: 3px;
-    display: inline-block;
-  }
-  
-   #skills {
-    background-color: transparent;
-    text-align: center;
-  }
-  
+  color: #ffcc00;
+  padding: 0 5px;
+  font-size: 34px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+#skills {
+  background-color: transparent;
+  text-align: center;
+}
 
 .progress-bars {
   display: flex;
@@ -187,7 +190,7 @@
 
 .progress-bar {
   position: relative;
-  width: 300px;
+  width: 100%;
   height: 20px;
   margin-bottom: 20px;
   background-color: #f1f1f1;
@@ -211,12 +214,12 @@
   margin-top: 5px;
   font-weight: bold;
   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: gold;
-    font-weight: bold;
-  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gold;
+}
+
 .skills-bubble-div {
   display: flex;
   justify-content: center;
@@ -229,7 +232,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin:20px;
+  margin: 20px;
 }
 
 .bubble {
@@ -253,50 +256,70 @@
 .bubble.js { background-color: #f7df1e; color: #000; }
 .bubble.react { background-color: #61dafb; color: #000; }
 .bubble.node { background-color: #68a063; }
-    
-    h3{
-    color: gold;
-    weight:bold;
-}  
+
+h3 {
+  color: gold;
+  weight: bold;
+}
 
 .education-card {
   cursor: pointer;
 }
 
-  .education-details {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #000000;
+.education-details {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
   padding: 20px;
-  Color:white;
+  color: white;
   border: 2px solid gold;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .close-button {
-            background-color: #ffd700;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
-        .close-button:hover {
-            background-color: #b8860b;
-        }
-.education-details h2{
-    color: Blue;
-    font-size:24px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  z-index:9999999;
 }
+
+.close-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.close-button i {
+  line-height: 1;
+}
+
+
+
+.education-details h2 {
+  color: blue;
+  font-size: 24px;
+}
+
 .education-card {
   background-color: #1e233bc9;
   color: white;
@@ -304,16 +327,18 @@
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  
 }
-.education-card h2{
-    color: gold;
+
+.education-card h2 {
+  color: gold;
 }
 
 .scrollable-section {
   position: relative;
   overflow: hidden;
-  width: 100%;  /* Adjust according to your layout */
-  height: 100%; /* Adjust according to your layout */
+  width: 100%;
+  height: 100%;
 }
 
 .floating-orb {
@@ -340,9 +365,9 @@
   display: inline-flex;
   align-items: center;
   padding: 12px 24px;
-  background-color: #D4AF37; /* Golden color */
-  color: #000000; /* Black text for better contrast on gold */
-  text-decoration: none; /* Removes underline */
+  background-color: #D4AF37;
+  color: #000000;
+  text-decoration: none;
   font-size: 18px;
   font-weight: bold;
   border-radius: 50px;
@@ -351,8 +376,8 @@
 }
 
 .download-button:hover {
-text-decoration: none;
-  background-color: #FFD700; /* Brighter gold on hover */
+  text-decoration: none;
+  background-color: #FFD700;
   transform: translateY(-2px);
   box-shadow: 0 7px 14px rgba(212, 175, 55, 0.4), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
@@ -360,6 +385,7 @@ text-decoration: none;
 .button-text {
   margin-right: 10px;
 }
+
 
 .button-icon {
   display: flex;
@@ -380,6 +406,92 @@ text-decoration: none;
 .download-button:hover {
   box-shadow: 0 7px 14px rgba(212, 175, 55, 0.4), 0 3px 6px rgba(0, 0, 0, 0.1),
               0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.cta-button i {
+    margin-left: 5px;
+}
+
+.hire-me-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.hire-me-content {
+    background-color: #1e233bc9;
+    padding: 20px;
+    color: White;
+    margin:20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+   .hire-me-content h2{
+       color: gold;
+   }
+   
+   .portfolio-footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+    color: black;
+}
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: gold;
+}
+
+/* Additional styles for Font Awesome icons */
+.fa-github:before {
+    content: "\f09b"; /* GitHub icon code */
+}
+
+.fa-dribbble:before {
+    content: "\f17d"; /* Dribbble icon code */
 }
 </style>
 </head>
@@ -418,7 +530,7 @@ text-decoration: none;
  
 <section class="intro-section">
      <div class="resume-download">
-  <a href="path/to/your/resume.pdf" download="YourName_Resume.pdf" class="download-button">
+  <a href="vinnykylexresume.pdf" download="vinnykylex_Resume.pdf" class="download-button">
     <span class="button-text">Download My Resume</span>
     <span class="button-icon">
       <i class="fas fa-download"></i>
@@ -474,70 +586,239 @@ text-decoration: none;
 </section>
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"style="transform: rotate(180deg);"><path fill="#0c0d46fe" fill-opacity="1" d="M0,64L30,80C60,96,120,128,180,165.3C240,203,300,245,360,224C420,203,480,117,540,96C600,75,660,117,720,160C780,203,840,245,900,240C960,235,1020,181,1080,181.3C1140,181,1200,235,1260,213.3C1320,192,1380,96,1410,48L1440,0L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg> 
-  <!-- Education -->  
-<section class="education-section">
-    <div class="title-card">
+  <!-- Education --> 
+  <div class="title-card">
   <h1><span class="gold-text">-</span> EDUCATION <span class="gold-text">-</span></h1>
-</div>
-<!-- ed 1 -->
-<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails(this)">
+</div> 
+ <section class="">
+<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('bscDetails')">
+    <div class="card-header">
+        <i class="fas fa-graduation-cap"></i>
         <h2>Bachelor of Science</h2>
-        <p>September 2021 - Present</p>
-        <p>MOI UNIVERSITY</p>
-        <button class="cta-button">View <i class="fa-solid fa-arrow-right"></i></button>
     </div>
-    <div class="education-details" id="educationDetails">
-        <h2>Bachelor of Science</h2>
-        <p>As a student pursuing a <strong>Bachelor of Science</strong> in <strong>Mathematics, Physics, Statistics, and Computer Programming</strong>, I've developed a <strong>robust problem-solving</strong> background and expertise in a wide array of subjects. These include <em>mechanics, telecommunications, electronics, power systems, computer engineering, advanced mathematics,</em> and <em>applied physics</em>.</p>
-        <p>This interdisciplinary program has nurtured my <em>critical thinking, objectivity, creativity,</em> and <em>self-discipline</em>. It has also encouraged me to think innovatively, pay attention to detail, and cultivate a broad range of technical skills. My time in this educational journey has been <u>invaluable</u>, urging me to explore beyond the obvious and consider various possibilities.</p>
-        <button class="close-button" onclick="closeDetails()">Close</button>
+    <div class="card-body">
+        <p><i class="far fa-calendar-alt"></i> September 2021 - Present</p>
+        <p><i class="fas fa-university"></i> MOI UNIVERSITY</p>
     </div>
-
- 
-
-<div class="education-card animate__animated animate__slideInRight" onclick="showMoreInfo('nodeJs')">
-     <h2>Fundamentals of Computers</h2>
-    <p>April 2018 - July 2018</p>
-    <p>ICS COLLEGE</p>
-    <button class="cta-button">View<i class="fa-solid fa-arrow-right"></i></button>
+    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>
 </div>
 
-<div class="education-card animate__animated animate__slideInUp" onclick="showMoreInfo('webDev')">
-    <h2>Web Development Bootcamp</h2>
-    <p>March 2021 - July 2021</p>
-    <p>APP BREWERY - DR ANGELA YU</p>
-    <button class="cta-button">View<i class="fa-solid fa-arrow-right"></i></button>
+<div class="education-details" id="bscDetails">
+    <div class="details-header">
+        <h2><i class="fas fa-graduation-cap"></i> Bachelor of Science</h2>
+        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="details-body">
+        <p>As a student pursuing a <strong>Bachelor of Science</strong> in <strong>Mathematics, Physics, Statistics, and Computer Programming</strong>, I've developed a <strong>robust problem-solving</strong> background and expertise in a wide array of subjects. These include:</p>
+        <ul>
+            <li><i class="fas fa-cog"></i> Mechanics</li>
+            <li><i class="fas fa-broadcast-tower"></i> Telecommunications</li>
+            <li><i class="fas fa-microchip"></i> Electronics</li>
+            <li><i class="fas fa-bolt"></i> Power Systems</li>
+            <li><i class="fas fa-laptop-code"></i> Computer Engineering</li>
+            <li><i class="fas fa-square-root-alt"></i> Advanced Mathematics</li>
+            <li><i class="fas fa-atom"></i> Applied Physics</li>
+        </ul>
+        <p>This interdisciplinary program has nurtured my:</p>
+        <ul>
+            <li><i class="fas fa-brain"></i> Critical Thinking</li>
+            <li><i class="fas fa-balance-scale"></i> Objectivity</li>
+            <li><i class="fas fa-lightbulb"></i> Creativity</li>
+            <li><i class="fas fa-user-clock"></i> Self-Discipline</li>
+        </ul>
+        <p>It has also encouraged me to think innovatively, pay attention to detail, and cultivate a broad range of technical skills. My time in this educational journey has been <u>invaluable</u>, urging me to explore beyond the obvious and consider various possibilities.</p>
+    </div>
 </div>
 
-<div class="education-card animate__animated animate__slideInUp" onclick="showMoreInfo('fundamentals')">
-    <h2>Node Js Bootcamp</h2>
-    <p>Nov 2021 - March 2022</p>
-    <p>UDEMY - ANDREW MEAD</p>
-    <button class="cta-button">View<i class="fa-solid fa-arrow-right"></i></button>
+<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('fundamentalsDetails')">
+    <div class="card-header">
+        <i class="fas fa-laptop"></i>
+        <h2>Fundamentals of Computers</h2>
+    </div>
+    <div class="card-body">
+        <p><i class="far fa-calendar-alt"></i> April 2023 - July 2023</p>
+        <p><i class="fas fa-school"></i> ICS COLLEGE</p>
+    </div>
+    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>
 </div>
 
-<div class="more-info-card" style="display: none;">
-    <div class="content">
-        <div class="nodeJs-info" style="display: none;">
-            <!-- Node Js Bootcamp info -->
-            <p>In this intensive bootcamp, I delved deep into the world of Node.js and gained comprehensive knowledge about its architecture and event-driven, non-blocking I/O model. </p><p>I acquired practical skills in building server-side applications and APIs, enhancing my ability to create efficient and scalable web applications.</p>
-            <button class="close-btn" onclick="closeMoreInfo('nodeJs')">Close</button>
-        </div>
-        <div class="webDev-info" style="display: none;">
-            <!-- Web Development Bootcamp info -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo euismod mi sed convallis.</p>
-            <button class="close-btn" onclick="closeMoreInfo('webDev')">Close</button>
-        </div>
-        <div class="fundamentals-info" style="display: none;">
-            <!-- Fundamentals of Computers info -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo euismod mi sed convallis.</p>
-            <button class="close-btn" onclick="closeMoreInfo('fundamentals')">Close</button>
-        </div>
+<div class="education-details" id="fundamentalsDetails">
+    <div class="details-header">
+        <h2><i class="fas fa-laptop"></i> Fundamentals of Computers</h2>
+        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="details-body">
+        <p>During my time at <strong>ICS COLLEGE</strong>, studying the <strong>Fundamentals of Computers</strong> from April 2023 to July 2023, I gained essential knowledge and skills in various core areas. These include:</p>
+        <ul>
+            <li><i class="fas fa-desktop"></i> Computer Hardware</li>
+            <li><i class="fas fa-code"></i> Programming Basics</li>
+            <li><i class="fas fa-database"></i> Database Management</li>
+            <li><i class="fas fa-network-wired"></i> Networking Fundamentals</li>
+            <li><i class="fas fa-shield-alt"></i> Cybersecurity</li>
+            <li><i class="fas fa-file-alt"></i> Office Applications</li>
+            <li><i class="fas fa-cogs"></i> System Maintenance</li>
+        </ul>
+        <p>This program has significantly enhanced my:</p>
+        <ul>
+            <li><i class="fas fa-brain"></i> Analytical Thinking</li>
+            <li><i class="fas fa-toolbox"></i> Technical Proficiency</li>
+            <li><i class="fas fa-project-diagram"></i> Problem-Solving Skills</li>
+            <li><i class="fas fa-clock"></i> Time Management</li>
+        </ul>
+        <p>It also inspired me to delve deeper into the world of computing, sharpen my technical abilities, and approach problems with a methodical and innovative mindset. This experience was <u>invaluable</u>, driving me to explore the expansive field of technology.</p>
+    </div>
+</div>
+</section>
+
+
+    </body>
+<script>
+   
+</script>
+<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('bootcampDetails')">
+    <div class="card-header">
+        <i class="fas fa-code"></i>
+        <h2>Web Development Bootcamp</h2>
+    </div>
+    <div class="card-body">
+        <p><i class="far fa-calendar-alt"></i> March 2021 - July 2021</p>
+        <p><i class="fas fa-school"></i> APP BREWERY - DR ANGELA YU</p>
+    </div>
+    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>
+</div>
+
+<div class="education-details" id="bootcampDetails">
+    <div class="details-header">
+        <h2><i class="fas fa-code"></i> Web Development Bootcamp</h2>
+        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="details-body">
+        <p>Attending the <strong>Web Development Bootcamp</strong> led by <strong>Dr. Angela Yu</strong> at <strong>APP BREWERY</strong> from March 2021 to July 2021 equipped me with comprehensive skills in modern web development. Key topics covered include:</p>
+        <ul>
+            <li><i class="fas fa-html5"></i> HTML & CSS</li>
+            <li><i class="fas fa-js"></i> JavaScript</li>
+            <li><i class="fas fa-database"></i> Backend Development with Node.js</li>
+            <li><i class="fas fa-server"></i> RESTful APIs</li>
+            <li><i class="fas fa-database"></i> Databases: MongoDB</li>
+            <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
+            <li><i class="fas fa-project-diagram"></i> Version Control with Git & GitHub</li>
+        </ul>
+        <p>This bootcamp significantly developed my:</p>
+        <ul>
+            <li><i class="fas fa-lightbulb"></i> Creativity and Innovation</li>
+            <li><i class="fas fa-tools"></i> Technical Proficiency</li>
+            <li><i class="fas fa-users"></i> Team Collaboration</li>
+            <li><i class="fas fa-clock"></i> Time Management</li>
+        </ul>
+        <p>The intensive, hands-on approach of this bootcamp was <u>invaluable</u>, driving me to master the full stack of web technologies and build real-world applications.</p>
+    </div>
+</div>
+
+<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('nodejsBootcampDetails')">
+    <div class="card-header">
+        <i class="fas fa-server"></i>
+        <h2>Node Js Bootcamp</h2>
+    </div>
+    <div class="card-body">
+        <p><i class="far fa-calendar-alt"></i> Nov 2021 - March 2022</p>
+        <p><i class="fas fa-school"></i> UDEMY - ANDREW MEAD</p>
+    </div>
+    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>
+</div>
+
+<div class="education-details" id="nodejsBootcampDetails">
+    <div class="details-header">
+        <h2><i class="fas fa-server"></i> Node Js Bootcamp</h2>
+        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="details-body">
+        <p>Enrolling in the <strong>Node Js Bootcamp</strong> taught by <strong>Andrew Mead</strong> on <strong>UDEMY</strong> from November 2021 to March 2022, I gained advanced knowledge and hands-on experience in server-side development. Key areas of focus included:</p>
+        <ul>
+            <li><i class="fas fa-code"></i> Node.js Basics and Core Modules</li>
+            <li><i class="fas fa-network-wired"></i> Asynchronous Programming</li>
+            <li><i class="fas fa-server"></i> Building and Deploying REST APIs</li>
+            <li><i class="fas fa-database"></i> Working with Databases (MongoDB)</li>
+            <li><i class="fas fa-lock"></i> Authentication and Security</li>
+            <li><i class="fas fa-project-diagram"></i> Testing and Debugging</li>
+            <li><i class="fas fa-tools"></i> Performance Optimization</li>
+        </ul>
+        <p>This bootcamp significantly enhanced my:</p>
+        <ul>
+            <li><i class="fas fa-brain"></i> Problem-Solving Skills</li>
+            <li><i class="fas fa-code-branch"></i> Backend Development Proficiency</li>
+            <li><i class="fas fa-tasks"></i> Project Management</li>
+            <li><i class="fas fa-lightbulb"></i> Innovative Thinking</li>
+        </ul>
+        <p>The comprehensive curriculum and practical exercises were <u>invaluable</u>, driving me to master Node.js and build scalable, efficient server-side applications.</p>
+    </div>
+</div>
+
+<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('graphicsDesignDetails')">
+    <div class="card-header">
+        <i class="fas fa-palette"></i>
+        <h2>Graphics Design Bootcamp</h2>
+    </div>
+    <div class="card-body">
+        <p><i class="far fa-calendar-alt"></i> January 2022 - April 2022</p>
+        <p><i class="fas fa-school"></i> YouTube - [YouTuber's Name]</p>
+    </div>
+    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>    
+</div>
+
+<div class="education-details" id="graphicsDesignDetails">
+    <div class="details-header">
+        <h2><i class="fas fa-palette"></i> Graphics Design Bootcamp</h2>
+        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="details-body">
+        <p>Participating in the <strong>Graphics Design Bootcamp</strong> hosted by a renowned YouTuber on YouTube from January 2022 to April 2022, I acquired a solid foundation in visual communication and design principles. Key topics covered during the bootcamp include:</p>
+        <ul>
+            <li><i class="fas fa-paint-brush"></i> Fundamentals of Design Theory</li>
+            <li><i class="fas fa-vector-square"></i> Vector Graphics and Illustration</li>
+            <li><i class="fas fa-camera"></i> Photo Editing and Manipulation</li>
+            <li><i class="fas fa-palette"></i> Color Theory and Application</li>
+            <li><i class="fas fa-font"></i> Typography and Layout</li>
+            <li><i class="fas fa-desktop"></i> Digital Design Tools (Adobe Creative Suite)</li>
+            <li><i class="fas fa-file-image"></i> Branding and Logo Design</li>
+        </ul>
+        <p>This bootcamp has significantly enhanced my:</p>
+        <ul>
+            <li><i class="fas fa-eye"></i> Visual Creativity</li>
+            <li><i class="fas fa-toolbox"></i> Technical Skills in Graphic Design Software</li>
+            <li><i class="fas fa-balance-scale"></i> Design Aesthetics and Balance</li>
+            <li><i class="fas fa-comments"></i> Client Communication and Presentation</li>
+        </ul>
+        <p>The practical assignments and mentorship provided during this bootcamp were <u>invaluable</u>, enabling me to develop a portfolio of professional-quality design work.</p>
     </div>
 </div>
 </section>
  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"style="transform: rotate(180deg);"><path fill="#0c0d46fe" fill-opacity="1" d="M0,64L30,80C60,96,120,128,180,165.3C240,203,300,245,360,224C420,203,480,117,540,96C600,75,660,117,720,160C780,203,840,245,900,240C960,235,1020,181,1080,181.3C1140,181,1200,235,1260,213.3C1320,192,1380,96,1410,48L1440,0L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg> 
+   <div class="title-card">
+  <h1><span class="gold-text">-</span> PROJECTS <span class="gold-text">-</span></h1>
+</div>
+   <!-- Hire me -->     
+ <section class="hire-me-card">
+            <div class="hire-me-content">
+                <h2>Hire Me</h2>
+                <p>Looking for a creative designer to bring your projects to life?</p>
+                <p>Contact me to discuss your design needs.</p>
+                <a href="mailto: vinnykylex@gmail.com" class="cta-button"><i class="fa-solid fa-envelope"></i></br> Get in Touch </a>
+            </div>
+        </section>  
+        
+        
    
+
+<footer class="portfolio-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 kylex inc. All rights reserved.</p>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    </body>
 <script>
 const sentences = [
   "I am passionate about Tech 🥶",
@@ -613,21 +894,6 @@ function checkVisibility() {
 window.addEventListener("scroll", checkVisibility);
 checkVisibility();
 
-function showDetails(card) {
-            document.getElementById('educationDetails').style.display = 'block';
-            document.getElementById('educationDetails').classList.add('animate__animated', 'animate__fadeIn');
-        }
-
-        function closeDetails() {
-            document.getElementById('educationDetails').classList.remove('animate__fadeIn');
-            document.getElementById('educationDetails').classList.add('animate__fadeOut');
-            setTimeout(() => {
-                document.getElementById('educationDetails').style.display = 'none';
-                document.getElementById('educationDetails').classList.remove('animate__fadeOut');
-            }, 500);
-        }
-        
-        // Your existing JavaScript code here
 
 // Function to create floating orbs
 function createFloatingOrbs() {
@@ -669,6 +935,31 @@ document.querySelector('.download-button').addEventListener('mouseover', functio
 document.querySelector('.download-button').addEventListener('mouseout', function() {
   this.querySelector('.button-icon').style.transform = 'translateY(0)';
 });
+
+ // JavaScript functions to show and close details
+    function showDetails(id) {
+        // Hide any other details that might be open
+        document.querySelectorAll('.education-details').forEach(detail => {
+            detail.style.display = 'none';
+        });
+
+        // Show the details related to the clicked card
+        document.getElementById(id).style.display = 'block';
+    }
+
+    function closeDetails() {
+        // Hide the currently visible details
+        document.querySelectorAll('.education-details').forEach(detail => {
+            detail.style.display = 'none';
+        });
+    }
+
+    // Adding event listeners to close buttons (to ensure this runs after DOM is loaded)
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.close-button').forEach(button => {
+            button.addEventListener('click', closeDetails);
+        });
+    });
 </script>
 </body>
 </html>
