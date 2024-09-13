@@ -1,6 +1,3 @@
-I'm# 💫 About Me:
-👋 Hi, I’m @Kylexvin<br>👀 I’m deeply interested in technology and website functionality.<br>🌱 I’m currently expanding my knowledge in the MERN stack.<br>💞️ I’m eager to collaborate on innovative projects that push the boundaries of what's possible.<br>🚀 Passionate about solving real-world problems through code and design.<br>🌍 Based in Kenya, but my work and collaborations know no boundaries.
-
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/vinny_kylex) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/vinny-kylex) [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/vinnykylex) [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@vinnykylex) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/kylexvinny) 
