@@ -327,7 +327,7 @@ h3 {
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  
+
 }
 
 .education-card h2 {
@@ -447,7 +447,7 @@ h3 {
    .hire-me-content h2{
        color: gold;
    }
-   
+
    .portfolio-footer {
     background-color: #1a1a1a;
     padding: 20px 0;
@@ -493,41 +493,80 @@ h3 {
 .fa-dribbble:before {
     content: "\f17d"; /* Dribbble icon code */
 }
+
+.title-card {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .gold-text {
+        color: gold;
+    }
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .project-card {
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        padding: 20px;
+        width: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .project-card h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .project-card p {
+        font-size: 1em;
+        margin-bottom: 15px;
+        color: #666;
+    }
+    .project-link {
+        color: #007BFF;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .project-link:hover {
+        text-decoration: underline;
+    }
 </style>
 </head>
 <body>
-    
+
   <section class="scrollable-section">
     <div class="profile-picture" id="neomorphism">
       <img src="profile.jpg" alt="Profile Picture">
       <ul class="wrapper">
-        <a href="https://www.facebook.com/vinny.kylex.1">
+        <a href="https://www.linkedin.com/in/vinny-kylex-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
           <li class="icon facebook">
             <span><i class="fab fa-linkedin"></i></span>
           </li>
         </a>
-        <a href="https://wa.me/254768610613">
+        <a href="https://github.com/Kylexvin">
           <li class="icon youtube">
             <span><i class="fab fa-github"></i></span>
           </li>
         </a>
-        <a href="https://wa.me/254768610613">
+        <!-- <a href="https://wa.me/254768610613">
           <li class="icon youtube">
             <span><i class="fab fa-dribbble"></i></span>
           </li>
-        </a>
+        </a> -->
       </ul>
     </div>
       <div class="intro-card">
       <h1 id="intro-text">My name is Vinny Kylex</br> <span id="dynamic-text"></span></h1>
     </div>
-    
-   
+
+
   </section>
-  
-  
+
+
    <!-- about me -->
- 
+
 <section class="intro-section">
      <div class="resume-download">
   <a href="vinnykylexresume.pdf" download="vinnykylex_Resume.pdf" class="download-button">
@@ -545,7 +584,7 @@ h3 {
   <button class="connect-button">Let's connect</button>
 </section>
 
-      
+
        <!-- Other skills -->
   <section class="scrollable-section">
    <section id="skills">
@@ -559,7 +598,7 @@ h3 {
     <div class="bubble css" style="width: 100px; height: 100px;"><span>CSS</span></div>
     <div class="bubble js" style="width: 140px; height: 140px;"><span>JavaScript</span></div>
     <div class="bubble react" style="width: 130px; height: 130px;"><span>React</span></div>
-    <div class="bubble node" style="width: 110px; height: 110px;"><span>Node.js</span></div>
+    <!-- <div class="bubble node" style="width: 110px; height: 110px;"><span>Node.js</span></div> -->
   </div>
 </div>
      <h3>Video Editing</h3>
@@ -611,11 +650,11 @@ h3 {
     <div class="details-body">
         <p>As a student pursuing a <strong>Bachelor of Science</strong> in <strong>Mathematics, Physics, Statistics, and Computer Programming</strong>, I've developed a <strong>robust problem-solving</strong> background and expertise in a wide array of subjects. These include:</p>
         <ul>
-            <li><i class="fas fa-cog"></i> Mechanics</li>
+            <!-- <li><i class="fas fa-cog"></i> Mechanics</li> -->
             <li><i class="fas fa-broadcast-tower"></i> Telecommunications</li>
-            <li><i class="fas fa-microchip"></i> Electronics</li>
-            <li><i class="fas fa-bolt"></i> Power Systems</li>
-            <li><i class="fas fa-laptop-code"></i> Computer Engineering</li>
+           <!--  <li><i class="fas fa-microchip"></i> Electronics</li> -->
+           <!--  <li><i class="fas fa-bolt"></i> Power Systems</li> -->
+            <!-- <li><i class="fas fa-laptop-code"></i> Computer Engineering</li> -->
             <li><i class="fas fa-square-root-alt"></i> Advanced Mathematics</li>
             <li><i class="fas fa-atom"></i> Applied Physics</li>
         </ul>
@@ -652,9 +691,9 @@ h3 {
         <ul>
             <li><i class="fas fa-desktop"></i> Computer Hardware</li>
             <li><i class="fas fa-code"></i> Programming Basics</li>
-            <li><i class="fas fa-database"></i> Database Management</li>
+           <!--  <li><i class="fas fa-database"></i> Database Management</li> -->
             <li><i class="fas fa-network-wired"></i> Networking Fundamentals</li>
-            <li><i class="fas fa-shield-alt"></i> Cybersecurity</li>
+           <!--  <li><i class="fas fa-shield-alt"></i> Cybersecurity</li> -->
             <li><i class="fas fa-file-alt"></i> Office Applications</li>
             <li><i class="fas fa-cogs"></i> System Maintenance</li>
         </ul>
@@ -669,12 +708,6 @@ h3 {
     </div>
 </div>
 </section>
-
-
-    </body>
-<script>
-   
-</script>
 <div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('bootcampDetails')">
     <div class="card-header">
         <i class="fas fa-code"></i>
@@ -695,11 +728,11 @@ h3 {
     <div class="details-body">
         <p>Attending the <strong>Web Development Bootcamp</strong> led by <strong>Dr. Angela Yu</strong> at <strong>APP BREWERY</strong> from March 2021 to July 2021 equipped me with comprehensive skills in modern web development. Key topics covered include:</p>
         <ul>
-            <li><i class="fas fa-html5"></i> HTML & CSS</li>
-            <li><i class="fas fa-js"></i> JavaScript</li>
-            <li><i class="fas fa-database"></i> Backend Development with Node.js</li>
-            <li><i class="fas fa-server"></i> RESTful APIs</li>
-            <li><i class="fas fa-database"></i> Databases: MongoDB</li>
+            <li><i class="fas fa-code"></i> HTML & CSS</li>
+            <li><i class="fas fa-code-branch"></i> React js</li>
+            <!-- <li><i class="fas fa-database"></i> Backend Development with Node.js</li> -->
+            <!-- <li><i class="fas fa-server"></i> RESTful APIs</li> -->
+           <!--  <li><i class="fas fa-database"></i> Databases: MongoDB</li> -->
             <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
             <li><i class="fas fa-project-diagram"></i> Version Control with Git & GitHub</li>
         </ul>
@@ -710,48 +743,10 @@ h3 {
             <li><i class="fas fa-users"></i> Team Collaboration</li>
             <li><i class="fas fa-clock"></i> Time Management</li>
         </ul>
-        <p>The intensive, hands-on approach of this bootcamp was <u>invaluable</u>, driving me to master the full stack of web technologies and build real-world applications.</p>
+               <p>The intensive, hands-on approach of this bootcamp was <u>invaluable</u>, driving me to master the full stack of web technologies and build real-world applications.</p>
     </div>
 </div>
 
-<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('nodejsBootcampDetails')">
-    <div class="card-header">
-        <i class="fas fa-server"></i>
-        <h2>Node Js Bootcamp</h2>
-    </div>
-    <div class="card-body">
-        <p><i class="far fa-calendar-alt"></i> Nov 2021 - March 2022</p>
-        <p><i class="fas fa-school"></i> UDEMY - ANDREW MEAD</p>
-    </div>
-    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>
-</div>
-
-<div class="education-details" id="nodejsBootcampDetails">
-    <div class="details-header">
-        <h2><i class="fas fa-server"></i> Node Js Bootcamp</h2>
-        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="details-body">
-        <p>Enrolling in the <strong>Node Js Bootcamp</strong> taught by <strong>Andrew Mead</strong> on <strong>UDEMY</strong> from November 2021 to March 2022, I gained advanced knowledge and hands-on experience in server-side development. Key areas of focus included:</p>
-        <ul>
-            <li><i class="fas fa-code"></i> Node.js Basics and Core Modules</li>
-            <li><i class="fas fa-network-wired"></i> Asynchronous Programming</li>
-            <li><i class="fas fa-server"></i> Building and Deploying REST APIs</li>
-            <li><i class="fas fa-database"></i> Working with Databases (MongoDB)</li>
-            <li><i class="fas fa-lock"></i> Authentication and Security</li>
-            <li><i class="fas fa-project-diagram"></i> Testing and Debugging</li>
-            <li><i class="fas fa-tools"></i> Performance Optimization</li>
-        </ul>
-        <p>This bootcamp significantly enhanced my:</p>
-        <ul>
-            <li><i class="fas fa-brain"></i> Problem-Solving Skills</li>
-            <li><i class="fas fa-code-branch"></i> Backend Development Proficiency</li>
-            <li><i class="fas fa-tasks"></i> Project Management</li>
-            <li><i class="fas fa-lightbulb"></i> Innovative Thinking</li>
-        </ul>
-        <p>The comprehensive curriculum and practical exercises were <u>invaluable</u>, driving me to master Node.js and build scalable, efficient server-side applications.</p>
-    </div>
-</div>
 
 <div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('graphicsDesignDetails')">
     <div class="card-header">
@@ -760,7 +755,7 @@ h3 {
     </div>
     <div class="card-body">
         <p><i class="far fa-calendar-alt"></i> January 2022 - April 2022</p>
-        <p><i class="fas fa-school"></i> YouTube - [YouTuber's Name]</p>
+        <p><i class="fas fa-school"></i> YouTube - Satori Graphics</p>
     </div>
     <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>    
 </div>
@@ -793,9 +788,56 @@ h3 {
 </div>
 </section>
  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"style="transform: rotate(180deg);"><path fill="#0c0d46fe" fill-opacity="1" d="M0,64L30,80C60,96,120,128,180,165.3C240,203,300,245,360,224C420,203,480,117,540,96C600,75,660,117,720,160C780,203,840,245,900,240C960,235,1020,181,1080,181.3C1140,181,1200,235,1260,213.3C1320,192,1380,96,1410,48L1440,0L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg> 
-   <div class="title-card">
-  <h1><span class="gold-text">-</span> PROJECTS <span class="gold-text">-</span></h1>
+  
+  
+  <div class="title-card">
+    <h1><span class="gold-text">-</span> PROJECTS <span class="gold-text">-</span></h1>
 </div>
+
+<div class="projects-container">
+    <!-- MoiHub Card -->
+    <div class="project-card">
+        <h2>MoiHub</h2>
+        <p>A platform offering services like rental bookings, food orders, e-shops, and more for Moi University students.</p>
+        <a href="https://moihub-silk.vercel.app/" target="_blank" class="project-link">Visit MoiHub</a>
+    </div>
+
+    <!-- Nkosira Organic Farm Card -->
+    <div class="project-card">
+        <h2>Nkosira Organic Farm</h2>
+        <p>An innovative permaculture-focused farm offering community training, organic produce, and tours in Samburu County.</p>
+        <a href="https://nkosirafarm.com/" target="_blank" class="project-link">Visit Nkosira Farm</a>
+    </div>
+
+<!-- MC Matata Card -->
+<div class="project-card">
+    <h2>MC Matata</h2>
+    <p>A professional MC portfolio website.</p>
+    <a href="https://mc-matata.vercel.app/" target="_blank" class="project-link">Visit MC Matata</a>
+</div>
+    <!-- GreenHub Grocery Store Card -->
+   <!--  <div class="project-card">
+        <h2>GreenHub Grocery Store</h2>
+        <p>A dynamic online store featuring a product catalog, search functionality, and WhatsApp ordering system.</p>
+        <a href="https://greenHubGrocery-link.com" target="_blank" class="project-link">Visit GreenHub</a>
+    </div> -->
+
+    <!-- KXBYTE (Syntarcore) Card -->
+    <div class="project-card">
+        <h2>KXBYTE (Vintarcore)</h2>
+        <p>A tech company providing solutions for daily life, including website design, SEO, and software development.</p>
+        <a href="https://syntarcore.vercel.app/" target="_blank" class="project-link">Visit KXBYTE</a>
+    </div>
+
+    <!-- Cakist Card -->
+   <!--  <div class="project-card">
+        <h2>Cakist</h2>
+        <p>A bakery offering cakes, cookies, and beverages, including custom packages for special occasions.</p>
+        <a href="https://cakist-link.com" target="_blank" class="project-link">Visit Cakist</a>
+    </div> -->
+</div>
+
+  
    <!-- Hire me -->     
  <section class="hire-me-card">
             <div class="hire-me-content">
@@ -805,9 +847,9 @@ h3 {
                 <a href="mailto: vinnykylex@gmail.com" class="cta-button"><i class="fa-solid fa-envelope"></i></br> Get in Touch </a>
             </div>
         </section>  
-        
-        
-   
+
+
+    
 
 <footer class="portfolio-footer">
         <div class="footer-content">
@@ -819,6 +861,29 @@ h3 {
         </div>
     </footer>
     </body>
+</script>
+<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('bootcampDetails')">
+    <div class="card-header">
+        <i class="fas fa-code"></i>
+        <h2>Web Development Bootcamp</h2>
+    </div>
+    <div class="card-body">
+        <p><i class="far fa-calendar-alt"></i> March 2021 - July 2021</p>
+        <p><i class="fas fa-school"></i> APP BREWERY - DR ANGELA YU</p>
+    </div>
+    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>
+</div>
+
+<div class="education-details" id="bootcampDetails">
+    <div class="details-header">
+        <h2><i class="fas fa-code"></i> Web Development Bootcamp</h2>
+        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="details-body">
+        <p>Attending the <strong>Web Development Bootcamp</strong> led by <strong>Dr. Angela Yu</strong> at <strong>APP BREWERY</strong> from March 2021 to July 2021 equipped me with comprehensive skills in modern web development. Key topics covered include:</p>
+        <ul>
+            <li><i class="fas
+
 <script>
 const sentences = [
   "I am passionate about Tech 🥶",
@@ -903,20 +968,20 @@ function createFloatingOrbs() {
   for (let i = 0; i < orbCount; i++) {
     const orb = document.createElement('div');
     orb.classList.add('floating-orb');
-    
+
     // Random size
     const size = Math.random() * 50 + 10; // 10-60px
     orb.style.width = `${size}px`;
     orb.style.height = `${size}px`;
-    
+
     // Random position
     orb.style.left = `${Math.random() * 100}%`;
     orb.style.top = `${Math.random() * 100}%`;
-    
+
     // Random color
     const hue = Math.random() * 360;
     orb.style.backgroundColor = `hsla(${hue}, 100%, 50%, 0.3)`;
-    
+
     // Random animation duration and delay
     orb.style.animationDuration = `${Math.random() * 10 + 5}s`; // 5-15s
     orb.style.animationDelay = `${Math.random() * 5}s`;
