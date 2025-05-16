@@ -16,1011 +16,828 @@
     <meta property="og:url" content="https://your-portfolio-link.com">
     <meta property="og:type" content="website">
 
+
     <!-- Twitter Card for Twitter sharing -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vinny Kylex Portfolio - Web Developer & Graphic Designer">
     <meta name="twitter:description" content="Discover the work of Vinny Kylex, offering services in web development, graphic design, SEO, and more.">
-    <meta name="twitter:image" content="https://example.com/path-to-image.jpg"> <!-- Replace with your portfolio image URL -->
-    
+    <meta name="twitter:image" content="https://example.com/path-to-image.jpg"> 
+
     <!-- Favicon -->
-    <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon"> <!-- Replace with your favicon -->
-    <!-- Bootstrap and FontAwesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" referrerpolicy="no-referrer">
-
-
-<style>
-   body {
-    background-image: url('bg.jpg');
-    background-repeat: repeat; /* Ensures the background image repeats */
-    background-size: contain; /* Ensures the background image is contained within the body */
-    background-color: rgba(0, 0, 0, 0.5); /* Sets a black background with 50% opacity */
-    background-position: center; /* Centers the background image */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.scrollable-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background: #0a0b13;
-}
-
-.profile-picture,
-.intro-card {
-  margin: 11px;
-}
-
-.profile-picture {
-  width: 200px;
-  flex-shrink: 0;
-}
-
-.profile-picture img {
-  width: 100%;
-  height: auto;
-  border: 2px solid white;
-  border-radius: 50%;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.wrapper a {
-  margin: 0 10px;
-}
-
-.wrapper .icon {
-  width: 40px;
-  height: 40px;
-  color:red;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ddd;
-}
-
-.wrapper .icon span {
-  font-size: 20px;
-}
-
-#intro-text {
-  margin: 0;
-  color: gold;
-  font-size: 20px;
-  line-height: 1;
-}
-
-.intro-card {
-  background-color: #ffffff;
-  padding: 20px;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  display: flex;
-  font-size: 20px;
-  margin: 20px auto;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  flex-grow: 1;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .scrollable-section {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-
-  .intro-card {
-    order: -1;
-  }
-}
-
-.intro-section {
-  text-align: left;
-  padding: 40px;
-  background-color: #0a0b13;
-  color: #fff;
-  background-image: url('dark.jpg');
-  object-fit: cover;
-}
-
-.intro-title {
-  font-size: 24px;
-  font-weight: bold;
-  animation: fadeInUp 1s ease-in-out;
-}
-
-.title-card {
-  background-color: black;
-  text-align: center;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 10px;
-  border-right: 0.5px solid gold;
-  border-left: 0.5px solid gold;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.gold-text {
-  color: gold;
-  font-weight: bold;
-}
-
-.title-card h1 {
-  color: white;
-  margin: 0;
-  font-size: 25px;
-  padding: 10px 0;
-}
-
-.intro-description {
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-.connect-button {
-  margin-top: 20px;
-  background-color: blue;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease;
-}
-
-.connect-button:hover {
-  background-color: #45a049;
-}
-
-.highlight {
-  color: #ffcc00;
-  padding: 0 5px;
-  font-size: 34px;
-  border-radius: 3px;
-  display: inline-block;
-}
-
-#skills {
-  background-color: transparent;
-  text-align: center;
-}
-
-.progress-bars {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.progress-bar {
-  position: relative;
-  width: 100%;
-  height: 20px;
-  margin-bottom: 20px;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: blue;
-  border-radius: 10px;
-  text-align: center;
-  transition: width 1s ease-in-out;
-}
-
-.skill-name {
-  display: block;
-  margin-top: 5px;
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: gold;
-}
-
-.skills-bubble-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bubbles-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 20px;
-}
-
-.bubble {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-}
-
-.bubble span {
-  display: block;
-  padding: 10px;
-}
-
-.bubble.html { background-color: #e34c26; }
-.bubble.css { background-color: #264de4; }
-.bubble.js { background-color: #f7df1e; color: #000; }
-.bubble.react { background-color: #61dafb; color: #000; }
-.bubble.node { background-color: #68a063; }
-
-h3 {
-  color: gold;
-  weight: bold;
-}
-
-.education-card {
-  cursor: pointer;
-}
-
-.education-details {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #000000;
-  padding: 20px;
-  color: white;
-  border: 2px solid gold;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  width: 100%;
-  max-height: 100vh;
-  overflow-y: auto;
-  z-index:9999999;
-}
-
-.close-button {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 18px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  z-index: 10;
-}
-
-.close-button:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  transform: scale(1.1);
-}
-
-.close-button i {
-  line-height: 1;
-}
-
-
-
-.education-details h2 {
-  color: blue;
-  font-size: 24px;
-}
-
-.education-card {
-  background-color: #1e233bc9;
-  color: white;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-
-}
-
-.education-card h2 {
-  color: gold;
-}
-
-.scrollable-section {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-.floating-orb {
-  position: absolute;
-  border-radius: 50%;
-  animation: float 10s infinite;
-  pointer-events: none;
-  animation: float-animation 30s infinite ease-in-out;
-}
-
-@keyframes float-animation {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(-50px, 50px) rotate(90deg); }
-  50% { transform: translate(50px, -50px) rotate(180deg); }
-  75% { transform: translate(50px, 50px) rotate(270deg); }
-}
-
-.resume-download {
-  margin: 30px 0;
-  text-align: center;
-}
-
-.download-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 12px 24px;
-  background-color: #D4AF37;
-  color: #000000;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(212, 175, 55, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.download-button:hover {
-  text-decoration: none;
-  background-color: #FFD700;
-  transform: translateY(-2px);
-  box-shadow: 0 7px 14px rgba(212, 175, 55, 0.4), 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.button-text {
-  margin-right: 10px;
-}
-
-
-.button-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  background-color: rgba(0, 0, 0, 0.1); /* Slightly darker for the icon background */
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.download-button:hover .button-icon {
-  background-color: rgba(0, 0, 0, 0.2); /* Darker on hover */
-}
-
-/* Optional: Add a subtle golden glow on hover */
-.download-button:hover {
-  box-shadow: 0 7px 14px rgba(212, 175, 55, 0.4), 0 3px 6px rgba(0, 0, 0, 0.1),
-              0 0 20px rgba(212, 175, 55, 0.5);
-}
-
-.cta-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    border-radius: 4px;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
-.cta-button i {
-    margin-left: 5px;
-}
-
-.hire-me-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-}
-
-.hire-me-content {
-    background-color: #1e233bc9;
-    padding: 20px;
-    color: White;
-    margin:20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-   .hire-me-content h2{
-       color: gold;
-   }
-
-   .portfolio-footer {
-    background-color: #1a1a1a;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.footer-content p {
-    margin: 0;
-    color: black;
-}
-.social-icons {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-.social-icons li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-.social-icons a:hover {
-    color: gold;
-}
-
-/* Additional styles for Font Awesome icons */
-.fa-github:before {
-    content: "\f09b"; /* GitHub icon code */
-}
-
-.fa-dribbble:before {
-    content: "\f17d"; /* Dribbble icon code */
-}
-
-.title-card {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .gold-text {
-        color: gold;
-    }
-    .projects-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-    .project-card {
-        background-color: #f5f5f5;
-        border-radius: 8px;
-        padding: 20px;
-        width: 250px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-    .project-card h2 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
-    .project-card p {
-        font-size: 1em;
-        margin-bottom: 15px;
-        color: #666;
-    }
-    .project-link {
-        color: #007BFF;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    .project-link:hover {
-        text-decoration: underline;
-    }
-</style>
+    <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon"> 
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<section class="scrollable-section">
-    <div class="profile-picture" id="neomorphism">
-      <img src="profile.jpg" alt="Profile Picture">
-      <ul class="wrapper">
-        <a href="https://www.linkedin.com/in/vinny-kylex-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-          <li class="icon facebook">
-            <span><i class="fab fa-linkedin"></i></span>
-          </li>
-        </a>
-        <a href="https://github.com/Kylexvin">
-          <li class="icon youtube">
-            <span><i class="fab fa-github"></i></span>
-          </li>
-        </a>
-      
-      </ul>
-    </div>
-      <div class="intro-card">
-      <h1 id="intro-text">My name is Vinny Kylex</br> <span id="dynamic-text"></span></h1>
-    </div>
+    <!-- Custom Cursor -->
+    <div class="cursor-outer"></div>
+    <div class="cursor-inner"></div>
 
-
-  </section>
-
-
-   <!-- about me -->
-
-<section class="intro-section">
-     <div class="resume-download">
-  <a href="vinnykylexresume.pdf" download="vinnykylex_Resume.pdf" class="download-button">
-    <span class="button-text">Download My Resume</span>
-    <span class="button-icon">
-      <i class="fas fa-download"></i>
-    </span>
-  </a>
-</div>
-     <div class="title-card">
-  <h1><span class="gold-text">-</span> ABOUT <span class="gold-text">-</span></h1>
-</div>
-  <h1 class="intro-title">I am<span class="highlight"> Vincent</span>,<br>A PASSIONATE DEVELOPER.</h1>
-  <p class="intro-description">I am an agile full-stack developer with a strong and unwavering passion for technology and a constant desire to learn. I excel at solving complex problems, proficient in both collaborative teamwork and autonomous troubleshooting. I am adept at navigating challenges with an innovative approach, prioritizing contextual understanding. I have effective communication skills, encompassing written and verbal aptitude. I am always curious to acquire knowledge in emerging technologies and leverage my experience to foster innovation and deliver high-quality products.</p>
-  <button class="connect-button">Let's connect</button>
-</section>
-
-
-       <!-- Other skills -->
-  <section class="scrollable-section">
-   <section id="skills">
-   <div class="skills-section">
-   <div class="title-card">
-  <h1><span class="gold-text">-</span> SKILLS <span class="gold-text">-</span></h1>
-</div>
-  <div class="skills-bubble-div">
-  <div class="bubbles-container">
-    <div class="bubble html" style="width: 120px; height: 120px;"><span>HTML</span></div>
-    <div class="bubble css" style="width: 100px; height: 100px;"><span>CSS</span></div>
-    <div class="bubble js" style="width: 140px; height: 140px;"><span>JavaScript</span></div>
-    <div class="bubble react" style="width: 130px; height: 130px;"><span>React</span></div>
-    <!-- <div class="bubble node" style="width: 110px; height: 110px;"><span>Node.js</span></div> -->
-  </div>
-</div>
-     <h3>Video Editing</h3>
-    <div class="progress-bar" data-progress="80">
-      <div class="progress"></div>
-      <span class="skill-name"></span>
-    </div>
-    <!--  -->
-     <h3>SEO</h3>
-    <div class="progress-bar" data-progress="90">
-      <div class="progress"></div>
-      <span class="skill-name"></span>
-    </div>
-    <!--  -->
-     <h3>Graphics Design</h3>
-    <div class="progress-bar" data-progress="70">
-      <div class="progress"></div>
-      <span class="skill-name"></span>
-    </div>
-    <!--  -->
-  </div>
-</div>
-</section>   
-</section>
-
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"style="transform: rotate(180deg);"><path fill="#0c0d46fe" fill-opacity="1" d="M0,64L30,80C60,96,120,128,180,165.3C240,203,300,245,360,224C420,203,480,117,540,96C600,75,660,117,720,160C780,203,840,245,900,240C960,235,1020,181,1080,181.3C1140,181,1200,235,1260,213.3C1320,192,1380,96,1410,48L1440,0L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg> 
-  <!-- Education --> 
-  <div class="title-card">
-  <h1><span class="gold-text">-</span> EDUCATION <span class="gold-text">-</span></h1>
-</div> 
- <section class="">
-<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('bscDetails')">
-    <div class="card-header">
-        <i class="fas fa-graduation-cap"></i>
-        <h2>Bachelor of Science</h2>
-    </div>
-    <div class="card-body">
-        <p><i class="far fa-calendar-alt"></i> September 2021 - Present</p>
-        <p><i class="fas fa-university"></i> MOI UNIVERSITY</p>
-    </div>
-    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>
-</div>
-
-<div class="education-details" id="bscDetails">
-    <div class="details-header">
-        <h2><i class="fas fa-graduation-cap"></i> Bachelor of Science</h2>
-        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="details-body">
-        <p>As a student pursuing a <strong>Bachelor of Science</strong> in <strong>Mathematics, Physics, Statistics, and Computer Programming</strong>, I've developed a <strong>robust problem-solving</strong> background and expertise in a wide array of subjects. These include:</p>
-        <ul>
-            <!-- <li><i class="fas fa-cog"></i> Mechanics</li> -->
-            <li><i class="fas fa-broadcast-tower"></i> Telecommunications</li>
-           <!--  <li><i class="fas fa-microchip"></i> Electronics</li> -->
-           <!--  <li><i class="fas fa-bolt"></i> Power Systems</li> -->
-            <!-- <li><i class="fas fa-laptop-code"></i> Computer Engineering</li> -->
-            <li><i class="fas fa-square-root-alt"></i> Advanced Mathematics</li>
-            <li><i class="fas fa-atom"></i> Applied Physics</li>
-        </ul>
-        <p>This interdisciplinary program has nurtured my:</p>
-        <ul>
-            <li><i class="fas fa-brain"></i> Critical Thinking</li>
-            <li><i class="fas fa-balance-scale"></i> Objectivity</li>
-            <li><i class="fas fa-lightbulb"></i> Creativity</li>
-            <li><i class="fas fa-user-clock"></i> Self-Discipline</li>
-        </ul>
-        <p>It has also encouraged me to think innovatively, pay attention to detail, and cultivate a broad range of technical skills. My time in this educational journey has been <u>invaluable</u>, urging me to explore beyond the obvious and consider various possibilities.</p>
-    </div>
-</div>
-
-<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('fundamentalsDetails')">
-    <div class="card-header">
-        <i class="fas fa-laptop"></i>
-        <h2>Fundamentals of Computers</h2>
-    </div>
-    <div class="card-body">
-        <p><i class="far fa-calendar-alt"></i> April 2023 - July 2023</p>
-        <p><i class="fas fa-school"></i> ICS COLLEGE</p>
-    </div>
-    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>
-</div>
-
-<div class="education-details" id="fundamentalsDetails">
-    <div class="details-header">
-        <h2><i class="fas fa-laptop"></i> Fundamentals of Computers</h2>
-        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="details-body">
-        <p>During my time at <strong>ICS COLLEGE</strong>, studying the <strong>Fundamentals of Computers</strong> from April 2023 to July 2023, I gained essential knowledge and skills in various core areas. These include:</p>
-        <ul>
-            <li><i class="fas fa-desktop"></i> Computer Hardware</li>
-            <li><i class="fas fa-code"></i> Programming Basics</li>
-           <!--  <li><i class="fas fa-database"></i> Database Management</li> -->
-            <li><i class="fas fa-network-wired"></i> Networking Fundamentals</li>
-           <!--  <li><i class="fas fa-shield-alt"></i> Cybersecurity</li> -->
-            <li><i class="fas fa-file-alt"></i> Office Applications</li>
-            <li><i class="fas fa-cogs"></i> System Maintenance</li>
-        </ul>
-        <p>This program has significantly enhanced my:</p>
-        <ul>
-            <li><i class="fas fa-brain"></i> Analytical Thinking</li>
-            <li><i class="fas fa-toolbox"></i> Technical Proficiency</li>
-            <li><i class="fas fa-project-diagram"></i> Problem-Solving Skills</li>
-            <li><i class="fas fa-clock"></i> Time Management</li>
-        </ul>
-        <p>It also inspired me to delve deeper into the world of computing, sharpen my technical abilities, and approach problems with a methodical and innovative mindset. This experience was <u>invaluable</u>, driving me to explore the expansive field of technology.</p>
-    </div>
-</div>
-</section>
-<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('bootcampDetails')">
-    <div class="card-header">
-        <i class="fas fa-code"></i>
-        <h2>Web Development Bootcamp</h2>
-    </div>
-    <div class="card-body">
-        <p><i class="far fa-calendar-alt"></i> March 2021 - July 2021</p>
-        <p><i class="fas fa-school"></i> APP BREWERY - DR ANGELA YU</p>
-    </div>
-    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>
-</div>
-
-<div class="education-details" id="bootcampDetails">
-    <div class="details-header">
-        <h2><i class="fas fa-code"></i> Web Development Bootcamp</h2>
-        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="details-body">
-        <p>Attending the <strong>Web Development Bootcamp</strong> led by <strong>Dr. Angela Yu</strong> at <strong>APP BREWERY</strong> from March 2021 to July 2021 equipped me with comprehensive skills in modern web development. Key topics covered include:</p>
-        <ul>
-            <li><i class="fas fa-code"></i> HTML & CSS</li>
-            <li><i class="fas fa-code-branch"></i> React js</li>
-            <!-- <li><i class="fas fa-database"></i> Backend Development with Node.js</li> -->
-            <!-- <li><i class="fas fa-server"></i> RESTful APIs</li> -->
-           <!--  <li><i class="fas fa-database"></i> Databases: MongoDB</li> -->
-            <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
-            <li><i class="fas fa-project-diagram"></i> Version Control with Git & GitHub</li>
-        </ul>
-        <p>This bootcamp significantly developed my:</p>
-        <ul>
-            <li><i class="fas fa-lightbulb"></i> Creativity and Innovation</li>
-            <li><i class="fas fa-tools"></i> Technical Proficiency</li>
-            <li><i class="fas fa-users"></i> Team Collaboration</li>
-            <li><i class="fas fa-clock"></i> Time Management</li>
-        </ul>
-               <p>The intensive, hands-on approach of this bootcamp was <u>invaluable</u>, driving me to master the full stack of web technologies and build real-world applications.</p>
-    </div>
-</div>
-
-
-<div class="education-card animate__animated animate__slideInLeft" onclick="showDetails('graphicsDesignDetails')">
-    <div class="card-header">
-        <i class="fas fa-palette"></i>
-        <h2>Graphics Design Bootcamp</h2>
-    </div>
-    <div class="card-body">
-        <p><i class="far fa-calendar-alt"></i> January 2022 - April 2022</p>
-        <p><i class="fas fa-school"></i> YouTube - Satori Graphics</p>
-    </div>
-    <button class="cta-button">View Details <i class="fas fa-chevron-right"></i></button>    
-</div>
-
-<div class="education-details" id="graphicsDesignDetails">
-    <div class="details-header">
-        <h2><i class="fas fa-palette"></i> Graphics Design Bootcamp</h2>
-        <button class="close-button" onclick="closeDetails()"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="details-body">
-        <p>Participating in the <strong>Graphics Design Bootcamp</strong> hosted by a renowned YouTuber on YouTube from January 2022 to April 2022, I acquired a solid foundation in visual communication and design principles. Key topics covered during the bootcamp include:</p>
-        <ul>
-            <li><i class="fas fa-paint-brush"></i> Fundamentals of Design Theory</li>
-            <li><i class="fas fa-vector-square"></i> Vector Graphics and Illustration</li>
-            <li><i class="fas fa-camera"></i> Photo Editing and Manipulation</li>
-            <li><i class="fas fa-palette"></i> Color Theory and Application</li>
-            <li><i class="fas fa-font"></i> Typography and Layout</li>
-            <li><i class="fas fa-desktop"></i> Digital Design Tools (Adobe Creative Suite)</li>
-            <li><i class="fas fa-file-image"></i> Branding and Logo Design</li>
-        </ul>
-        <p>This bootcamp has significantly enhanced my:</p>
-        <ul>
-            <li><i class="fas fa-eye"></i> Visual Creativity</li>
-            <li><i class="fas fa-toolbox"></i> Technical Skills in Graphic Design Software</li>
-            <li><i class="fas fa-balance-scale"></i> Design Aesthetics and Balance</li>
-            <li><i class="fas fa-comments"></i> Client Communication and Presentation</li>
-        </ul>
-        <p>The practical assignments and mentorship provided during this bootcamp were <u>invaluable</u>, enabling me to develop a portfolio of professional-quality design work.</p>
-    </div>
-</div>
-</section>
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"style="transform: rotate(180deg);"><path fill="#0c0d46fe" fill-opacity="1" d="M0,64L30,80C60,96,120,128,180,165.3C240,203,300,245,360,224C420,203,480,117,540,96C600,75,660,117,720,160C780,203,840,245,900,240C960,235,1020,181,1080,181.3C1140,181,1200,235,1260,213.3C1320,192,1380,96,1410,48L1440,0L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg> 
-  
-  
-  <div class="title-card">
-    <h1><span class="gold-text">-</span> PROJECTS <span class="gold-text">-</span></h1>
-</div>
-
-<div class="projects-container">
-    <!-- MoiHub Card -->
-    <div class="project-card">
-        <h2>MoiHub</h2>
-        <p>A platform offering services like rental bookings, food orders, e-shops, and more for Moi University students.</p>
-        <a href="https://moihub-silk.vercel.app/" target="_blank" class="project-link">Visit MoiHub</a>
-    </div>
-
-    <!-- Nkosira Organic Farm Card -->
-    <div class="project-card">
-        <h2>Nkosira Organic Farm</h2>
-        <p>An innovative permaculture-focused farm offering community training, organic produce, and tours in Samburu County.</p>
-        <a href="https://nkosirafarm.com/" target="_blank" class="project-link">Visit Nkosira Farm</a>
-    </div>
-
-<!-- MC Matata Card -->
-<div class="project-card">
-    <h2>MC Matata</h2>
-    <p>A professional MC portfolio website.</p>
-    <a href="https://mc-matata.vercel.app/" target="_blank" class="project-link">Visit MC Matata</a>
-</div>
-    <!-- GreenHub Grocery Store Card -->
-   <!--  <div class="project-card">
-        <h2>GreenHub Grocery Store</h2>
-        <p>A dynamic online store featuring a product catalog, search functionality, and WhatsApp ordering system.</p>
-        <a href="https://greenHubGrocery-link.com" target="_blank" class="project-link">Visit GreenHub</a>
-    </div> -->
-
-    <!-- KXBYTE (Syntarcore) Card -->
-    <div class="project-card">
-        <h2>KXBYTE (Vintarcore)</h2>
-        <p>A tech company providing solutions for daily life, including website design, SEO, and software development.</p>
-        <a href="https://syntarcore.vercel.app/" target="_blank" class="project-link">Visit KXBYTE</a>
-    </div>
-
-    <!-- Cakist Card -->
-   <!--  <div class="project-card">
-        <h2>Cakist</h2>
-        <p>A bakery offering cakes, cookies, and beverages, including custom packages for special occasions.</p>
-        <a href="https://cakist-link.com" target="_blank" class="project-link">Visit Cakist</a>
-    </div> -->
-</div>
-
-  
-   <!-- Hire me -->     
- <section class="hire-me-card">
-            <div class="hire-me-content">
-                <h2>Hire Me</h2>
-                <p>Looking for a creative designer to bring your projects to life?</p>
-                <p>Contact me to discuss your design needs.</p>
-                <a href="mailto: vinnykylex@gmail.com" class="cta-button"><i class="fa-solid fa-envelope"></i></br> Get in Touch </a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="neon-text"></span><span class="secondary-neon-text"></span>
             </div>
-        </section>  
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="grid-bg">
+            <div class="grid"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="intro-text">Hello, I'm</p>
+                    <h1 class="name">
+                        <span class="first-name neon-text">KYLEX</span>
+                        <span class="last-name secondary-neon-text">VIN</span>
+                    </h1>
+                    <div class="title-container">
+                        <h2 class="job-title">Full Stack Developer</h2>
+                        <div class="typing-text">
+                            <span id="typing-element"></span><span class="blinking-cursor">|</span>
+                        </div>
+                    </div>
+                    <p class="hero-description">Building futuristic digital experiences with cutting-edge technologies.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="cta-primary">Get in Touch</a>
+                        <a href="#projects" class="cta-secondary">View Projects</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-frame">
+                        <div class="image-container">
+                            <img src="profile.jpg" alt="Developer Profile">
+                        </div>
+                        <div class="frame-detail top-left"></div>
+                        <div class="frame-detail top-right"></div>
+                        <div class="frame-detail bottom-left"></div>
+                        <div class="frame-detail bottom-right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <p>Scroll Down</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+  <!-- About Section -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><span class="neon-text">About</span> Me</h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="about-content">
+      <div class="about-text">
+        <h3 class="sub-title">Who I Am</h3>
+        <p>I'm a full stack developer driven by a passion for crafting dynamic and efficient web applications. I specialize in both front-end and back-end development, delivering seamless, responsive, and intuitive user experiences.</p>
+        <p>With over 3 years of experience in tech, I've consistently explored innovative solutions, transforming ideas into impactful digital products. Solving complex problems and building practical tools is what excites me most.</p>
+
+        <h3 class="sub-title mt-4">My Skills</h3>
+        <div class="skills-container">
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-react"></i></div>
+            <span>React.js</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+            <span>Node.js</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-js"></i></div>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <span>MongoDB</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+            <span>HTML5</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+            <span>CSS3</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-github"></i></div>
+            <span>Git & GitHub</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-server"></i></div>
+            <span>Express.js</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+            <span>Cloudinary</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-envelope-open-text"></i></div>
+            <span>SendGrid</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My <span class="secondary-neon-text">Projects</span></h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGFzaGJvYXJkfHx8fHx8MTYxOTUzNDM0OA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Quantum Dashboard</h3>
+                        <p class="project-description">A modern analytical dashboard with real-time data visualization and interactive charts.</p>
+                        <div class="project-techs">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link view-case-study"><i class="fas fa-file-alt"></i> Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZWNvbW1lcmNlfHx8fHx8MTYxOTUzNDQwNQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NeoCommerce</h3>
+                        <p class="project-description">A sleek e-commerce platform with advanced filtering, search, and payment integration.</p>
+                        <div class="project-techs">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Styled Components</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link view-case-study"><i class="fas fa-file-alt"></i> Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="backend">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YXBpfHx8fHx8MTYxOTUzNDQ1OQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">API Nexus</h3>
+                        <p class="project-description">A comprehensive API service with authentication, rate limiting, and detailed documentation.</p>
+                        <div class="project-techs">
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Swagger</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Documentation</a>
+                            <a href="#" class="project-link view-case-study"><i class="fas fa-file-alt"></i> Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2hhdHx8fHx8fDE2MTk1MzQ1MDU&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Project 4">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Fusion Chat</h3>
+                        <p class="project-description">Real-time messaging application with end-to-end encryption and media sharing capabilities.</p>
+                        <div class="project-techs">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link view-case-study"><i class="fas fa-file-alt"></i> Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
+    <!-- Case Study Modal -->
+    <div class="modal" id="caseStudyModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="case-study-content">
+                <h2 class="case-study-title">Project Case Study</h2>
+                <div class="case-study-body">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
 
-<footer class="portfolio-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 kylex inc. All rights reserved.</p>
-            <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-github"></i></a></li>
-                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-            </ul>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="neon-text">Work</span> Experience</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>2023 - Present</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <h3>Senior Full Stack Developer</h3>
+                        <h4>TechMatrix Solutions</h4>
+                        <p>Lead development of complex web applications using the MERN stack. Implemented CI/CD pipelines and mentored junior developers.</p>
+                        <div class="timeline-techs">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>2021 - 2023</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <h3>Frontend Developer</h3>
+                        <h4>InnovateX</h4>
+                        <p>Developed responsive web interfaces and interactive components. Implemented state management and optimized performance.</p>
+                        <div class="timeline-techs">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">SCSS</span>
+                            <span class="tech-tag">Webpack</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>2019 - 2021</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <h3>Web Developer</h3>
+                        <h4>Digital Pulse Agency</h4>
+                        <p>Created custom websites and web applications for clients across various industries. Worked on both frontend and backend development.</p>
+                        <div class="timeline-techs">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>2018 - 2019</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <h3>Junior Developer</h3>
+                        <h4>StartUp Labs</h4>
+                        <p>Assisted in the development of web applications and learned various web technologies and development methodologies.</p>
+                        <div class="timeline-techs">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">jQuery</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in <span class="secondary-neon-text">Touch</span></h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="glass-card">
+                        <h3 class="sub-title">Contact Information</h3>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p>vinnykylex@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Location</h4>
+                                <p>Eldoret, Kenya</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Phone</h4>
+                                <p>+254768610613</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <div class="glass-card">
+                        <h3 class="sub-title">Send a Message</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <button type="submit" class="cta-primary">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="neon-text">DEV</span><span class="secondary-neon-text">KYLEX</span>
+                </div>
+                <p class="footer-text">Building the digital future, one line of code at a time.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="footer-nav">
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                    <a href="#experience" class="footer-link">Experience</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 DevKylex. All Rights Reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
-    </body>
-<script>
-const sentences = [
-  "I am passionate about Tech 🥶",
-  "Welcome to my portfolio!"
-];
 
-const dynamicText = document.getElementById("dynamic-text");
-let index = 0;
-let currentSentence = "";
-let isDeleting = false;
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
-function type() {
-  const sentence = sentences[index];
-  if (isDeleting) {
-    currentSentence = sentence.substring(0, currentSentence.length - 1);
-  } else {
-    currentSentence = sentence.substring(0, currentSentence.length + 1);
-  }
-  dynamicText.innerHTML = currentSentence;
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+    // Custom Cursor
+    const cursorOuter = document.querySelector('.cursor-outer');
+    const cursorInner = document.querySelector('.cursor-inner');
+    const links = document.querySelectorAll('a, button, .project-card, .skill-item, .info-item, .social-link');
 
-  if (!isDeleting && currentSentence === sentence) {
-    isDeleting = true;
-    setTimeout(type, 400);
-  } else if (isDeleting && currentSentence === "") {
-    isDeleting = false;
-    index++;
-    if (index === sentences.length) {
-      index = 0;
-    }
-    setTimeout(type, 500);
-  } else {
-    setTimeout(type, isDeleting ? 100 : 100);
-  }
-}
+    document.addEventListener('mousemove', function(e) {
+        cursorOuter.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+        cursorInner.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+    });
 
-type();
-
- // Get all the progress bars
-const progressBars = document.querySelectorAll(".progress-bar");
-
-// Function to animate the progress bars
-function animateProgress() {
-  progressBars.forEach((bar) => {
-    const progress = bar.querySelector(".progress");
-    const targetProgress = bar.getAttribute("data-progress");
-    let currentProgress = 0;
-
-    const intervalId = setInterval(() => {
-      if (currentProgress >= targetProgress) {
-        clearInterval(intervalId);
-      } else {
-        currentProgress++;
-        progress.style.width = `${currentProgress}%`;
-      }
-    }, 10);
-  });
-}
-
-// Check if the skills section is visible in the viewport
-function checkVisibility() {
-  const skillsSection = document.querySelector(".skills-section");
-  const sectionTop = skillsSection.offsetTop;
-  const sectionHeight = skillsSection.offsetHeight;
-  const windowHeight = window.innerHeight;
-  const scrollTop = window.pageYOffset;
-
-  if (scrollTop > sectionTop - windowHeight + sectionHeight / 2) {
-    animateProgress();
-    window.removeEventListener("scroll", checkVisibility);
-  }
-}
-
-window.addEventListener("scroll", checkVisibility);
-checkVisibility();
-
-
-// Function to create floating orbs
-function createFloatingOrbs() {
-  const section = document.querySelector('.scrollable-section');
-  const orbCount = 20; // Number of orbs
-
-  for (let i = 0; i < orbCount; i++) {
-    const orb = document.createElement('div');
-    orb.classList.add('floating-orb');
-
-    // Random size
-    const size = Math.random() * 50 + 10; // 10-60px
-    orb.style.width = `${size}px`;
-    orb.style.height = `${size}px`;
-
-    // Random position
-    orb.style.left = `${Math.random() * 100}%`;
-    orb.style.top = `${Math.random() * 100}%`;
-
-    // Random color
-    const hue = Math.random() * 360;
-    orb.style.backgroundColor = `hsla(${hue}, 100%, 50%, 0.3)`;
-
-    // Random animation duration and delay
-    orb.style.animationDuration = `${Math.random() * 10 + 5}s`; // 5-15s
-    orb.style.animationDelay = `${Math.random() * 5}s`;
-
-    section.appendChild(orb);
-  }
-}
-
-// Call the function when the page loads
-window.addEventListener('load', createFloatingOrbs);
-
-document.querySelector('.download-button').addEventListener('mouseover', function() {
-  this.querySelector('.button-icon').style.transform = 'translateY(3px)';
-});
-
-document.querySelector('.download-button').addEventListener('mouseout', function() {
-  this.querySelector('.button-icon').style.transform = 'translateY(0)';
-});
-
- // JavaScript functions to show and close details
-    function showDetails(id) {
-        // Hide any other details that might be open
-        document.querySelectorAll('.education-details').forEach(detail => {
-            detail.style.display = 'none';
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursorOuter.classList.add('hover');
+            cursorInner.classList.add('hover');
         });
 
-        // Show the details related to the clicked card
-        document.getElementById(id).style.display = 'block';
-    }
-
-    function closeDetails() {
-        // Hide the currently visible details
-        document.querySelectorAll('.education-details').forEach(detail => {
-            detail.style.display = 'none';
-        });
-    }
-
-    // Adding event listeners to close buttons (to ensure this runs after DOM is loaded)
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.close-button').forEach(button => {
-            button.addEventListener('click', closeDetails);
+        link.addEventListener('mouseleave', () => {
+            cursorOuter.classList.remove('hover');
+            cursorInner.classList.remove('hover');
         });
     });
-</script>
+
+    // Navigation Scroll Effect
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile Navigation
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Typing Effect
+    const typingElement = document.getElementById('typing-element');
+    const words = ['Web Developer', 'UI/UX Designer', 'JavaScript Expert', 'Problem Solver'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let isEnd = false;
+
+    function type() {
+        const currentWord = words[wordIndex];
+        const currentChar = currentWord.substring(0, charIndex);
+        typingElement.textContent = currentChar;
+
+        if (!isDeleting && charIndex < currentWord.length) {
+            // Typing
+            charIndex++;
+            setTimeout(type, 100);
+        } else if (isDeleting && charIndex > 0) {
+            // Deleting
+            charIndex--;
+            setTimeout(type, 50);
+        } else {
+            // Change word
+            isDeleting = !isDeleting;
+            if (!isDeleting) {
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+            setTimeout(type, 1000);
+        }
+    }
+
+    // Start typing effect
+    setTimeout(type, 1000);
+
+    // Project Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const filterValue = button.getAttribute('data-filter');
+            
+            projectCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Modal
+    const modal = document.getElementById('caseStudyModal');
+    const modalClose = document.querySelector('.close-modal');
+    const caseStudyLinks = document.querySelectorAll('.view-case-study');
+
+    caseStudyLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectCard = link.closest('.project-card');
+            const projectTitle = projectCard.querySelector('.project-title').textContent;
+            const projectDescription = projectCard.querySelector('.project-description').textContent;
+            
+            document.querySelector('.case-study-title').textContent = projectTitle;
+            document.querySelector('.case-study-body').innerHTML = `
+                <p><strong>Description:</strong> ${projectDescription}</p>
+                <p>This is a detailed case study for the ${projectTitle} project. Here you would include information about:</p>
+                <ul>
+                    <li>The project goals and objectives</li>
+                    <li>Technologies used and why they were chosen</li>
+                    <li>Challenges faced and how they were overcome</li>
+                    <li>Results and impact of the project</li>
+                    <li>Lessons learned</li>
+                </ul>
+                <p>You can expand this section with actual project details, screenshots, code snippets, and any other relevant information that showcases your work on this project.</p>
+            `;
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    modalClose.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Back to Top Button
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('active');
+        } else {
+            backToTopButton.classList.remove('active');
+        }
+    });
+
+    // Form Submission
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        // Here you would typically send the form data to a server
+        // For this example, we'll just log it and show an alert
+        console.log({ name, email, subject, message });
+        
+        alert('Thank you for your message! I will get back to you soon.');
+        contactForm.reset();
+    });
+
+    // Initialize Particles.js
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#00f7ff"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00f7ff",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    }
+
+    // Animate elements on scroll
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.about-content, .project-card, .timeline-item, .contact-content > div');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    // Set initial state for animation
+    const animateElements = document.querySelectorAll('.about-content, .project-card, .timeline-item, .contact-content > div');
+    animateElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+
+    window.addEventListener('scroll', animateOnScroll);
+    // Trigger once on load in case elements are already in view
+    animateOnScroll();
+});
+    </script>
 </body>
 </html>
-    
