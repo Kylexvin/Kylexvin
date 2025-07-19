@@ -1,8 +1,10 @@
 # 👋 Hi there, I'm **Vinny Kylex**
 
-I'm a full-stack developer and creative designer driven by the challenge of solving real-world problems with smart, scalable tech. I specialize in building web applications with the **MERN stack**, spicing things up with clean UI/UX, and delivering digital solutions that actually work. Whether it’s code, design, or business ideas—I’m all in.
+I'm a full-stack developer and creative designer driven by the challenge of solving real-world problems with smart, scalable tech. I specialize in building web applications with the **MERN stack**, spicing things up with clean UI/UX, and delivering digital solutions that actually work. Whether it’s code, design, or business ideas I’m all in.
 
 ---
+---
+
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/vinny_kylex) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/vinny-kylex) [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/vinnykylex) [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@vinnykylex) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/kylexvinny) 
