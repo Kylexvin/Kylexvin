@@ -1,16 +1,10 @@
 # 👋 Hi there, I'm **Vinny Kylex**
 
-I'm a full-stack developer and creative designer driven by the challenge of solving real-world problems with smart, scalable tech. I specialize in building web applications with the **MERN stack**, spicing things up with clean UI/UX, and delivering digital solutions that actually work. Whether it’s code, design, or business ideas — I’m all in.
+I'm a full-stack developer and creative designer driven by the challenge of solving real-world problems with smart, scalable tech. I specialize in building web applications with the **MERN stack**, spicing things up with clean UI/UX, and delivering digital solutions that actually work. Whether it’s code, design, or business ideas.  I’m all in.
 
 ---
 
-<pre>
-██    ██ ██ ███    ██ ███    ██ ██    ██     ██   ██ ██    ██ ██      ███████ ██   ██
-██    ██ ██ ████   ██ ████   ██ ██    ██     ██   ██ ██    ██ ██      ██      ██   ██
-██    ██ ██ ██ ██  ██ ██ ██  ██ ██    ██     ███████ ██    ██ ██      █████   ███████
- ██  ██  ██ ██  ██ ██ ██  ██ ██ ██    ██     ██   ██ ██    ██ ██      ██      ██   ██
-  ████   ██ ██   ████ ██   ████  ██████      ██   ██  ██████  ███████ ███████ ██   ██
-</pre>
+
 
 ---
 
