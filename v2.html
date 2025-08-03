@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Case Study Modal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #00f7ff;
+            text-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 247, 255, 0.2);
+            border-color: rgba(0, 247, 255, 0.3);
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #00f7ff;
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-techs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(0, 247, 255, 0.1);
+            color: #00f7ff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(0, 247, 255, 0.2);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            background: rgba(0, 247, 255, 0.1);
+            color: #00f7ff;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 247, 255, 0.2);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            background: rgba(0, 247, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 247, 255, 0.3);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            margin: 20px;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            border: 1px solid rgba(0, 247, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            transform: scale(0.7);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            background: rgba(0, 247, 255, 0.1);
+            padding: 25px 30px;
+            border-bottom: 1px solid rgba(0, 247, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .case-study-title {
+            color: #00f7ff;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .close-modal {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            background: none;
+            border: none;
+            padding: 5px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-modal:hover {
+            color: #ff4444;
+            background: rgba(255, 68, 68, 0.1);
+        }
+
+        .case-study-body {
+            padding: 30px;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        .case-study-body h3 {
+            color: #00f7ff;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .case-study-body h3:first-child {
+            margin-top: 0;
+        }
+
+        .case-study-body p {
+            margin-bottom: 15px;
+        }
+
+        .case-study-body ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .case-study-body li {
+            margin-bottom: 8px;
+            color: #cccccc;
+        }
+
+        .highlight-box {
+            background: rgba(0, 247, 255, 0.1);
+            border-left: 4px solid #00f7ff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .challenge-box {
+            background: rgba(255, 68, 68, 0.1);
+            border-left: 4px solid #ff4444;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        /* Custom scrollbar for modal */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: rgba(0, 247, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 247, 255, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                margin: 10px;
+                width: calc(100% - 20px);
+            }
+            
+            .modal-header {
+                padding: 20px;
+            }
+            
+            .case-study-body {
+                padding: 20px;
+            }
+            
+            .case-study-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        
+        <div class="projects-grid">
+            <!-- Project 1: MoiHub -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1581092334605-940235f2f0d9?auto=format&fit=crop&w=1080&q=80" alt="MoiHub Platform">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">MoiHub Platform</h3>
+                    <p class="project-description">
+                        A comprehensive campus solution app offering food delivery, rentals, e-shops, roommate finder, real-time messaging, and an AI-powered dating feature.
+                    </p>
+                    <div class="project-techs">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Socket.io</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="#" class="project-link view-case-study" data-project="moihub">
+                            <i class="fas fa-file-alt"></i> Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: NeoCommerce -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1080&q=80" alt="NeoCommerce">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">NeoCommerce</h3>
+                    <p class="project-description">
+                        A sleek e-commerce platform with advanced filtering, search, and payment integration built with modern React architecture.
+                    </p>
+                    <div class="project-techs">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Redux</span>
+                        <span class="tech-tag">Styled Components</span>
+                        <span class="tech-tag">Stripe</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="#" class="project-link view-case-study" data-project="neocommerce">
+                            <i class="fas fa-file-alt"></i> Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: API Nexus -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1080&q=80" alt="API Nexus">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">API Nexus</h3>
+                    <p class="project-description">
+                        A comprehensive API service with authentication, rate limiting, and detailed documentation for enterprise applications.
+                    </p>
+                    <div class="project-techs">
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">Swagger</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Documentation
+                        </a>
+                        <a href="#" class="project-link view-case-study" data-project="apinexus">
+                            <i class="fas fa-file-alt"></i> Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Fusion Chat -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?auto=format&fit=crop&w=1080&q=80" alt="Fusion Chat">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Fusion Chat</h3>
+                    <p class="project-description">
+                        Real-time messaging application with end-to-end encryption and media sharing capabilities for secure communication.
+                    </p>
+                    <div class="project-techs">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Socket.io</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="#" class="project-link view-case-study" data-project="fusionchat">
+                            <i class="fas fa-file-alt"></i> Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study Modal -->
+    <div id="caseStudyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="case-study-title">Case Study</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="case-study-body">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Modal elements
+    const modal = document.getElementById('caseStudyModal');
+    const modalTitle = modal.querySelector('.case-study-title');
+    const modalBody = modal.querySelector('.case-study-body');
+    const closeBtn = modal.querySelector('.close-modal');
+    const caseStudyLinks = document.querySelectorAll('.view-case-study');
+
+    // Case study data
+    const caseStudies = {
+        moihub: {
+            title: "MoiHub Platform - Comprehensive Case Study",
+            content: `
+                <div class="highlight-box">
+                    <h3>🎯 Project Overview</h3>
+                    <p><strong>Challenge:</strong> Moi University students faced fragmented services for food delivery, accommodation, shopping, and social connections.</p>
+                    <p><strong>Solution:</strong> MoiHub - A unified digital campus ecosystem that integrates all essential student services into one powerful mobile application.</p>
+                </div>
+
+                <h3>🚀 Key Features & Innovations</h3>
+                <ul>
+                    <li><strong>🍕 Smart Food Delivery:</strong> Real-time tracking with campus-specific logistics</li>
+                    <li><strong>🏠 Rental Marketplace:</strong> Verified listings with virtual tours and roommate matching</li>
+                    <li><strong>🛒 Student E-commerce:</strong> Buy/sell textbooks and essentials with escrow protection</li>
+                    <li><strong>👥 AI Roommate Finder:</strong> Compatibility algorithm based on lifestyle and preferences</li>
+                    <li><strong>💬 Encrypted Messaging:</strong> End-to-end encryption for secure campus communication</li>
+                    <li><strong>❤️ Smart Dating:</strong> AI-powered matching with privacy-first approach</li>
+                </ul>
+
+                <h3>⚡ Technical Architecture</h3>
+                <p><strong>Frontend:</strong> React Native with TypeScript for cross-platform excellence</p>
+                <p><strong>Backend:</strong> Node.js microservices with Express.js and GraphQL APIs</p>
+                <p><strong>Database:</strong> MongoDB with Redis caching for optimal performance</p>
+                <p><strong>Real-time:</strong> Socket.io clusters for scalable live communications</p>
+                <p><strong>Security:</strong> JWT authentication with refresh tokens and OAuth integration</p>
+                <p><strong>Cloud:</strong> AWS infrastructure with auto-scaling and CDN distribution</p>
+
+                <div class="challenge-box">
+                    <h3>🔧 Technical Challenges Solved</h3>
+                    <p><strong>Offline-First Architecture:</strong> Implemented smart caching and sync mechanisms for poor campus connectivity, achieving 95% offline functionality.</p>
+                    <p><strong>Real-time Scalability:</strong> Built custom WebSocket clustering solution supporting 10,000+ concurrent connections with sub-100ms latency.</p>
+                    <p><strong>AI Integration:</strong> Developed machine learning models for compatibility matching with 85% accuracy rate using TensorFlow.js.</p>
+                </div>
+
+                <h3>📊 Performance Metrics</h3>
+                <ul>
+                    <li><strong>178 Active Beta Users:</strong> Successfully onboarded with 89% retention rate</li>
+                    <li><strong>2.3s Average Load Time:</strong> Optimized for low-end Android devices</li>
+                    <li><strong>99.7% Uptime:</strong> Robust infrastructure with automatic failover</li>
+                    <li><strong>4.8/5 User Rating:</strong> High satisfaction with intuitive UX design</li>
+                </ul>
+
+                <h3>🎨 UX/UI Innovations</h3>
+                <p>Designed with student behavior in mind, featuring one-handed navigation, dark mode for late-night studying, and campus-themed UI elements. Implemented progressive disclosure to reduce cognitive load while maintaining feature richness.</p>
+
+                <h3>🔮 Future Roadmap</h3>
+                <ul>
+                    <li>Integration with university academic systems</li>
+                    <li>Blockchain-based student verification</li>
+                    <li>AR campus navigation features</li>
+                    <li>Multi-university expansion across Kenya</li>
+                </ul>
+            `
+        },
+        neocommerce: {
+            title: "NeoCommerce - Frontend Excellence Case Study",
+            content: `
+                <div class="highlight-box">
+                    <h3>🎯 Project Vision</h3>
+                    <p><strong>Goal:</strong> Create a cutting-edge e-commerce frontend that delivers exceptional performance while maintaining beautiful, intuitive design.</p>
+                    <p><strong>Approach:</strong> Modern React architecture with advanced state management and performance optimization techniques.</p>
+                </div>
+
+                <h3>✨ Advanced Features</h3>
+                <ul>
+                    <li><strong>🔍 Intelligent Search:</strong> Debounced search with auto-suggestions and typo tolerance</li>
+                    <li><strong>🎛️ Dynamic Filtering:</strong> Real-time filtering with URL state management</li>
+                    <li><strong>💳 Seamless Payments:</strong> Stripe integration with saved payment methods</li>
+                    <li><strong>📱 Responsive Design:</strong> Mobile-first with perfect desktop scaling</li>
+                    <li><strong>🚀 Performance Optimized:</strong> Code splitting, lazy loading, and image optimization</li>
+                    <li><strong>♿ Accessibility First:</strong> WCAG 2.1 compliant with screen reader support</li>
+                </ul>
+
+                <h3>🏗️ Technical Implementation</h3>
+                <p><strong>Architecture:</strong> Component-driven development with atomic design principles</p>
+                <p><strong>State Management:</strong> Redux Toolkit with RTK Query for efficient data fetching</p>
+                <p><strong>Styling:</strong> Styled Components with theme system and CSS-in-JS benefits</p>
+                <p><strong>Testing:</strong> Jest + React Testing Library with 95% coverage</p>
+                <p><strong>Build Tools:</strong> Webpack optimization with Bundle Analyzer insights</p>
+
+                <div class="challenge-box">
+                    <h3>⚡ Performance Optimizations</h3>
+                    <p><strong>Bundle Size:</strong> Reduced initial bundle from 2.1MB to 340KB through strategic code splitting</p>
+                    <p><strong>Loading Speed:</strong> Achieved 1.2s First Contentful Paint with service worker caching</p>
+                    <p><strong>Memory Management:</strong> Implemented virtual scrolling for large product lists</p>
+                </div>
+
+                <h3>🎨 Design System</h3>
+                <p>Built comprehensive design system with 40+ reusable components, consistent spacing scale, and accessible color palette. Documented in Storybook with interactive examples.</p>
+
+                <h3>📈 Key Achievements</h3>
+                <ul>
+                    <li><strong>Lighthouse Score:</strong> 98 Performance, 100 Best Practices</li>
+                    <li><strong>Conversion Rate:</strong> 23% increase in mobile conversions</li>
+                    <li><strong>Developer Experience:</strong> 95% component reusability</li>
+                    <li><strong>Load Times:</strong> 65% faster than industry average</li>
+                </ul>
+
+                <h3>🔧 Advanced Features</h3>
+                <p>Implemented advanced cart management with persistent state, wishlist synchronization, and intelligent product recommendations using collaborative filtering algorithms.</p>
+            `
+        },
+        apinexus: {
+            title: "API Nexus - Backend Architecture Case Study",
+            content: `
+                <div class="highlight-box">
+                    <h3>🎯 Enterprise Vision</h3>
+                    <p><strong>Mission:</strong> Build a robust, scalable API service that provides secure, documented, and monitored access to business-critical data.</p>
+                    <p><strong>Architecture:</strong> Microservices-based Node.js backend with enterprise-grade security and monitoring.</p>
+                </div>
+
+                <h3>🔐 Security Implementation</h3>
+                <ul>
+                    <li><strong>🔑 JWT Authentication:</strong> Secure token-based auth with refresh token rotation</li>
+                    <li><strong>🛡️ Rate Limiting:</strong> Redis-based intelligent rate limiting with IP whitelisting</li>
+                    <li><strong>🔒 Data Encryption:</strong> AES-256 encryption for sensitive data at rest</li>
+                    <li><strong>🚫 Input Validation:</strong> Joi schema validation with SQL injection prevention</li>
+                    <li><strong>📊 Audit Logging:</strong> Comprehensive logging with ELK stack integration</li>
+                    <li><strong>🌐 CORS Management:</strong> Dynamic CORS configuration with domain validation</li>
+                </ul>
+
+                <h3>📚 API Documentation</h3>
+                <p><strong>Swagger Integration:</strong> Auto-generated OpenAPI 3.0 documentation with interactive testing</p>
+                <p><strong>Code Examples:</strong> Multi-language SDK examples (JavaScript, Python, PHP)</p>
+                <p><strong>Versioning:</strong> Semantic API versioning with backward compatibility</p>
+
+                <div class="challenge-box">
+                    <h3>⚡ Performance & Scalability</h3>
+                    <p><strong>Response Times:</strong> Sub-50ms average response time with Redis caching</p>
+                    <p><strong>Concurrent Users:</strong> Handles 15,000+ simultaneous requests</p>
+                    <p><strong>Database Optimization:</strong> MongoDB indexes reducing query time by 89%</p>
+                    <p><strong>Auto-scaling:</strong> Kubernetes deployment with horizontal pod autoscaling</p>
+                </div>
+
+                <h3>🔧 Advanced Features</h3>
+                <ul>
+                    <li><strong>GraphQL Support:</strong> Flexible data fetching with Apollo Server</li>
+                    <li><strong>WebSocket Events:</strong> Real-time data streaming capabilities</li>
+                    <li><strong>File Upload:</strong> Multipart upload with virus scanning</li>
+                    <li><strong>Webhook System:</strong> Event-driven notifications with retry logic</li>
+                </ul>
+
+                <h3>📊 Monitoring & Analytics</h3>
+                <p>Implemented comprehensive monitoring with Prometheus metrics, Grafana dashboards, and custom alerting. API usage analytics with trend analysis and anomaly detection.</p>
+
+                <h3>🏆 Business Impact</h3>
+                <ul>
+                    <li><strong>99.99% Uptime:</strong> Enterprise-grade reliability</li>
+                    <li><strong>50+ Integrated Apps:</strong> Successful third-party integrations</li>
+                    <li><strong>Security Audits:</strong> Passed enterprise security assessments</li>
+                    <li><strong>Developer Adoption:</strong> 200+ registered API consumers</li>
+                </ul>
+            `
+        },
+        fusionchat: {
+            title: "Fusion Chat - Real-time Communication Case Study",
+            content: `
+                <div class="highlight-box">
+                    <h3>🎯 Communication Revolution</h3>
+                    <p><strong>Vision:</strong> Create a secure, fast, and feature-rich messaging platform that prioritizes user privacy without compromising functionality.</p>
+                    <p><strong>Innovation:</strong> End-to-end encryption with seamless user experience and enterprise-grade scalability.</p>
+                </div>
+
+                <h3>🔐 Advanced Security Features</h3>
+                <ul>
+                    <li><strong>🔒 E2E Encryption:</strong> Signal Protocol implementation with perfect forward secrecy</li>
+                    <li><strong>🔑 Key Management:</strong> Automated key rotation and secure key exchange</li>
+                    <li><strong>👻 Disappearing Messages:</strong> Auto-delete with secure memory cleanup</li>
+                    <li><strong>🛡️ Zero-Knowledge:</strong> Server cannot decrypt user messages</li>
+                    <li><strong>📱 Device Verification:</strong> QR code device linking with trust scores</li>
+                </ul>
+
+                <h3>⚡ Real-time Architecture</h3>
+                <p><strong>WebSocket Clustering:</strong> Redis-backed Socket.io clusters for horizontal scaling</p>
+                <p><strong>Message Queue:</strong> RabbitMQ for reliable message delivery and offline storage</p>
+                <p><strong>CDN Integration:</strong> CloudFlare for global media delivery with edge caching</p>
+                <p><strong>Push Notifications:</strong> FCM integration with E2E encrypted payloads</p>
+
+                <div class="challenge-box">
+                    <h3>🚀 Performance Achievements</h3>
+                    <p><strong>Message Latency:</strong> Sub-50ms global message delivery</p>
+                    <p><strong>Concurrent Users:</strong> 25,000+ simultaneous connections per server</p>
+                    <p><strong>File Transfer:</strong> 100MB+ files with resumable uploads</p>
+                    <p><strong>Offline Support:</strong> 7-day message queue with smart sync</p>
+                </div>
+
+                <h3>🎨 User Experience Innovation</h3>
+                <ul>
+                    <li><strong>✨ Smooth Animations:</strong> 60fps message transitions with Framer Motion</li>
+                    <li><strong>🎭 Rich Media:</strong> GIF search, emoji reactions, and message formatting</li>
+                    <li><strong>👁️ Read Receipts:</strong> Privacy-respecting delivery confirmations</li>
+                    <li><strong>⌨️ Typing Indicators:</strong> Real-time typing status with user avatars</li>
+                    <li><strong>🌙 Adaptive UI:</strong> System-aware dark/light mode with custom themes</li>
+                </ul>
+
+                <h3>📱 Cross-Platform Excellence</h3>
+                <p>Progressive Web App with native app performance, offline message drafts, and seamless synchronization across devices. Service worker implementation for background message handling.</p>
+
+                <h3>🏗️ Technical Stack</h3>
+                <p><strong>Frontend:</strong> React with TypeScript and Context API</p>
+                <p><strong>Real-time:</strong> Socket.io with Redis adapter for clustering</p>
+                <p><strong>Backend:</strong> Express.js with microservices architecture</p>
+                <p><strong>Database:</strong> MongoDB with message indexing and archiving</p>
+                <p><strong>Encryption:</strong> Web Crypto API with libsodium for mobile</p>
+                <p><strong>Media Storage:</strong> AWS S3 with CloudFront CDN distribution</p>
+
+                <div class="challenge-box">
+                    <h3>🔧 Technical Challenges Overcome</h3>
+                    <p><strong>Encryption Performance:</strong> Optimized crypto operations to maintain 60fps UI while encrypting messages in real-time</p>
+                    <p><strong>Connection Reliability:</strong> Implemented exponential backoff reconnection with seamless state restoration</p>
+                    <p><strong>Memory Management:</strong> Virtual message lists preventing memory leaks in long conversations</p>
+                </div>
+
+                <h3>📊 Impact Metrics</h3>
+                <ul>
+                    <li><strong>User Engagement:</strong> 4.5 hours average daily usage</li>
+                    <li><strong>Message Volume:</strong> 1M+ messages processed daily</li>
+                    <li><strong>Security Audits:</strong> Zero vulnerabilities in penetration testing</li>
+                    <li><strong>Platform Adoption:</strong> 15,000+ active users across web and mobile</li>
+                </ul>
+
+                <h3>🔮 Future Innovations</h3>
+                <ul>
+                    <li>WebRTC integration for voice and video calls</li>
+                    <li>AI-powered smart replies and translation</li>
+                    <li>Advanced group management with role-based permissions</li>
+                    <li>Blockchain-based message verification system</li>
+                </ul>
+
+                <h3>🏆 Lessons Learned</h3>
+                <p>Building secure real-time applications requires careful balance between security and performance. The key insight was implementing encryption at the application layer while maintaining WebSocket performance through strategic batching and compression.</p>
+            `
+        }
+    };
+
+    // Debug logging
+    console.log('Modal elements found:', {
+        modal: !!modal,
+        modalTitle: !!modalTitle,
+        modalBody: !!modalBody,
+        closeBtn: !!closeBtn,
+        caseStudyLinks: caseStudyLinks.length
+    });
+
+    // Open modal function
+    function openModal(projectId) {
+        console.log('Opening modal for project:', projectId);
+        const study = caseStudies[projectId];
+        if (study) {
+            modalTitle.textContent = study.title;
+            modalBody.innerHTML = study.content;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            console.log('Modal opened successfully');
+        } else {
+            console.error('No case study found for project:', projectId);
+        }
+    }
+
+    // Close modal function
+    function closeModal() {
+        console.log('Closing modal');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Event listeners for case study links
+    caseStudyLinks.forEach((link, index) => {
+        console.log(`Adding listener to case study link ${index + 1}`);
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const projectId = this.getAttribute('data-project');
+            console.log('Case study link clicked:', projectId);
+            openModal(projectId);
+        });
+    });
+
+    // Close modal event listeners
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeModal();
+        });
+    }
+
+    // Click outside modal to close
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Escape key to close modal
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Prevent modal content clicks from closing modal
+    const modalContent = modal.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    // Test modal functionality
+    console.log('Case study modal system initialized');
+    console.log('Available case studies:', Object.keys(caseStudies));
+});
+</script>
