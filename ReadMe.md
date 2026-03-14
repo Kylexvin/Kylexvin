@@ -2,6 +2,7 @@
 Hi, I’m Kylex 👋<br><br>I’m a MERN stack developer focused on building scalable web and mobile applications. I work heavily with MongoDB, Express, React, React Native, and Node.js, building full-stack systems from architecture to deployment.<br><br>I’m the founder of KXBYTE, a digital solutions company focused on practical, real-world tech solutions, and the creator of MoiHub, a multi-service student platform integrating rentals, marketplace, food delivery, messaging, and more into one ecosystem.<br><br>I enjoy building systems that solve real problems, optimizing performance, integrating APIs, and turning ideas into production-ready products.
 
 
+
 ## 🌐 Socials:
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/kylex) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/kylex_vin) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/kylexvinny) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:vinnykylex@gmail.com) 
 
