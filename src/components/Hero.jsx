@@ -59,7 +59,7 @@ const Hero = () => {
           <div className="hero-image">
             <div className="image-frame">
               <div className="image-container">
-                <img src="/profile.jpg" alt="Developer Profile" />
+                <img src="/profile_img.jpg" alt="Developer Profile" />
               </div>
               <div className="frame-detail top-left"></div>
               <div className="frame-detail top-right"></div>
@@ -68,12 +68,12 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="scroll-indicator">
+        {/* <div className="scroll-indicator">
           <span className="mouse">
             <span className="wheel"></span>
           </span>
           <p>Scroll Down</p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

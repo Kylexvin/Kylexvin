@@ -13,6 +13,14 @@ const Navbar = () => {
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
     setMenuOpen(false);
+    
+    // If not on home page, go to home page first
+    if (window.location.pathname !== '/') {
+      window.location.href = `/${targetId}`;
+      return;
+    }
+    
+    // If already on home page, just scroll
     const target = document.querySelector(targetId);
     if (target) {
       window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
@@ -27,8 +35,8 @@ const Navbar = () => {
       <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
         <div className="nav-container container">
           <div className="logo">
-            <span className="neon-text">DEV</span>
-            <span className="secondary-neon-text">KYLEX</span>
+            <span className="neon-text logo-dev">DEV</span>
+            <span className="secondary-neon-text logo-vin">KYLEX</span>
           </div>
           <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
             <a href="#home" className="nav-link" onClick={(e) => handleNavClick(e, '#home')}>Home</a>
