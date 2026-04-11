@@ -58,7 +58,7 @@ const Contact = () => {
                 <div className="info-icon"><i className="fas fa-map-marker-alt"></i></div>
                 <div className="info-text">
                   <h4>Location</h4>
-                  <p>Eldoret, Kenya</p>
+                  <p>Nairobi, Kenya</p>
                 </div>
               </div>
               <div className="info-item">
