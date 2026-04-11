@@ -5,8 +5,8 @@ const projects = [
     category: 'fullstack',
     title: 'MoiHub Platform',
     shortDesc: 'Comprehensive campus super-app for Moi University students.',
-    mockupImage: 'https://images.unsplash.com/photo-1581092334605-940235f2f0d9?auto=format&fit=crop&w=400&q=80',
-    techs: ['React Native', 'Node.js', 'Express', 'MongoDB', 'Socket.io'],
+    mockupImage: '/lappy.jpg',
+    techs: ['React ', 'Node.js', 'Express', 'MongoDB', 'Socket.io'],
     liveUrl: 'https://moihub-silk.vercel.app',
     githubUrl: 'https://github.com/kylexvin/moihub',
     caseStudy: {
@@ -34,38 +34,7 @@ const projects = [
       ]
     }
   },
-  {
-    id: 'neocommerce',
-    category: 'fullstack',
-    title: 'NeoCommerce',
-    shortDesc: 'Sleek e-commerce platform with advanced filtering and Stripe payments.',
-    mockupImage: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80',
-    techs: ['React', 'Redux', 'Styled Components', 'Stripe'],
-    liveUrl: '#',
-    githubUrl: '#',
-    caseStudy: {
-      overview: 'A modern performant e-commerce frontend delivering exceptional UX with clean maintainable code.',
-      problem: 'Needed a fast, responsive shopping experience with real-time filtering and seamless checkout.',
-      solution: 'React component architecture with Redux state management and Stripe integration.',
-      features: [
-        '🔍 Debounced search with real-time suggestions',
-        '🎛️ Multi-criteria smart filtering',
-        '💳 Seamless Stripe checkout',
-        '📱 Mobile-first responsive design',
-        '⚡ Lazy loading + code splitting',
-      ],
-      achievements: [
-        '95+ Lighthouse performance score',
-        '200ms search response time',
-        '95% component reusability',
-        '99.9% checkout success rate',
-      ],
-      challenges: [
-        { problem: 'Performance on low-end devices', solution: 'React.memo + useMemo optimization' },
-        { problem: 'Complex filter state', solution: 'Redux Toolkit slice architecture' },
-      ]
-    }
-  },
+
 
   // MOBILE
   {
@@ -73,7 +42,7 @@ const projects = [
     category: 'mobile',
     title: 'MoiHub Mobile App',
     shortDesc: 'Cross-platform React Native app with EAS builds and offline support.',
-    mockupImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=80',
+    mockupImage: '/moihubapp.png',
     techs: ['React Native', 'Expo', 'EAS', 'AsyncStorage', 'Firebase'],
     liveUrl: '#',
     githubUrl: 'https://github.com/kylexvin/moihub',
@@ -100,17 +69,144 @@ const projects = [
       ]
     }
   },
-
+{
+  id: 'mtz-app',
+  category: 'mobile',
+  title: 'MTZ App (Milk Token Exchange)',
+  shortDesc: 'Tokenized milk value system enabling farmers to store, transfer, and redeem milk as digital assets.',
+  mockupImage: '/mtz.png',
+  techs: ['React Native', 'Node.js', 'Express', 'MongoDB'],
+  liveUrl: '#',
+  githubUrl: '#',
+  caseStudy: {
+    overview: 'MTZ is a fintech-agritech mobile system that converts milk deposits into digital tokens, enabling farmers to store value, transfer it peer-to-peer, and redeem it for cash or milk. The platform connects farmers, depot attendants, and processors like KCC into one transparent ecosystem.',
+    problem: 'Farmers face unstable pricing, delayed payments, and lack a reliable way to store or transfer the value of their produce. Existing systems rely heavily on middlemen with little transparency.',
+    solution: 'Built a token-based system where milk is digitized at the point of deposit, giving farmers instant value in a wallet that can be redeemed, transferred, or withdrawn anytime.',
+    features: [
+      '🥛 Milk-to-token conversion at depot level',
+      '💰 Instant wallet balance for farmers',
+      '🔁 Peer-to-peer (P2P) token transfers',
+      '🏧 Cash redemption via attendants or mobile money',
+      '🛢️ Milk withdrawal using tokens',
+      '📊 Transparent transaction tracking',
+    ],
+    achievements: [
+      'Fully working MVP with complete value flow simulation',
+      'End-to-end lifecycle: deposit → transfer → redemption',
+      'Designed for low-connectivity environments',
+      'Simple UI optimized for non-technical users',
+    ],
+    challenges: [
+      { problem: 'Designing a balanced token-value system', solution: 'Mapped real-world milk flow to controlled token issuance' },
+      { problem: 'Ensuring simple UX for rural users', solution: 'Minimal UI with clear actions and wallet visibility' },
+      { problem: 'Simulating real-world economic flows', solution: 'Built full cycle including depot, processor, and P2P interactions' },
+    ]
+  }
+},
+{
+  id: 'kxtill-pos',
+  category: 'mobile',
+  title: 'KXTill POS System',
+  shortDesc: 'Offline-first desktop POS system for retail businesses with real-time sales and inventory management.',
+  mockupImage: '/pos.png',
+  techs: ['Electron', 'React', 'Node.js', 'SQLite'],
+  liveUrl: '#',
+  githubUrl: '#',
+  caseStudy: {
+    overview: 'KXTill POS is a desktop-based point-of-sale system designed for small and medium retail businesses. It provides fast, reliable sales processing, inventory tracking, and reporting — all optimized for offline-first environments.',
+    problem: 'Many small businesses rely on unstable internet connections, making cloud-based POS systems unreliable. They also lack affordable, modern tools for managing inventory and sales efficiently.',
+    solution: 'Built a lightweight Electron-based desktop application with offline-first architecture, enabling businesses to operate seamlessly without internet dependency while maintaining accurate records and analytics.',
+    features: [
+      '🧾 Fast sales processing interface',
+      '📦 Inventory management with stock tracking',
+      '💵 Multiple payment methods (cash, mobile money)',
+      '📊 Sales analytics and reporting dashboard',
+      '🔌 Offline-first desktop functionality',
+      '🖨️ Receipt generation and printing support',
+    ],
+    achievements: [
+      'Optimized for low-resource machines',
+      'Instant sales recording with local database',
+      'Clean and intuitive cashier interface',
+      'Scalable architecture for multi-branch support',
+    ],
+    challenges: [
+      { problem: 'Handling offline data persistence', solution: 'Used SQLite for reliable local storage' },
+      { problem: 'Ensuring fast UI performance in Electron', solution: 'Optimized React rendering and minimized background processes' },
+      { problem: 'Designing for non-technical users', solution: 'Simple, cashier-friendly interface design' },
+    ]
+  }
+},
   // CLIENT WORK
+  {
+  id: 'sagrema-foundation',
+  category: 'client',
+  title: 'Sagrema Foundation Website',
+  shortDesc: 'Official website for a community foundation focused on social impact and development programs.',
+  mockupImage: '/sagrema.jpg',
+  techs: ['html', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+  liveUrl: 'https://sagremafoundation.org',
+  githubUrl: 'https://github.com/Kylexvin/sagremafoundation',
+  caseStudy: {
+    overview: 'A modern, responsive website built for Sagrema Foundation to showcase their mission, programs, and community impact initiatives.',
+    problem: 'The foundation lacked a professional digital presence to communicate their work and attract partners or donors.',
+    solution: 'Designed and developed a clean, storytelling-focused website with smooth animations and structured content sections for programs and impact visibility.',
+    features: [
+      '🌍 Mission and vision storytelling sections',
+      '📊 Programs and impact showcase',
+      '🖼️ Media and gallery integration',
+      '📱 Fully responsive layout',
+      '✨ Smooth Framer Motion animations',
+    ],
+    achievements: [
+      'Improved online visibility for foundation activities',
+      'Clear structure for donor engagement',
+      'Fast, modern UI deployed on Vercel',
+    ],
+    challenges: [
+      { problem: 'Organizing large narrative content', solution: 'Structured content into modular sections for clarity' },
+    ]
+  }
+},
+{
+  id: 'globe-givers-cbo',
+  category: 'client',
+  title: 'Globe Givers CBO Website',
+  shortDesc: 'Community-based organization website for outreach programs and local initiatives.',
+  mockupImage: '/globegivers.jpg',
+  techs: ['html', 'CSS', 'JavaScript', 'Vercel'],
+  liveUrl: 'https://globegivers.vercel.app/',
+  githubUrl: 'https://github.com/Kylexvin/globegivers',
+  caseStudy: {
+    overview: 'A professional website built for Globe Givers CBO to present their community programs, events, and outreach activities in a structured digital format.',
+    problem: 'The organization had no centralized platform to showcase their work, limiting visibility and donor engagement.',
+    solution: 'Built a simple, fast, and mobile-friendly React website focused on clarity, accessibility, and storytelling.',
+    features: [
+      '🏘️ Community program listings',
+      '📅 Events and outreach updates',
+      '📞 Contact and partnership section',
+      '📱 Mobile-first responsive design',
+      '⚡ Fast static deployment',
+    ],
+    achievements: [
+      'Improved credibility and online presence',
+      'Easy navigation for donors and partners',
+      'Lightweight and fast-loading website',
+    ],
+    challenges: [
+      { problem: 'Limited content and branding material', solution: 'Designed layout-first structure and adapted content visually' },
+    ]
+  }
+},
   {
     id: 'nkosira',
     category: 'client',
     title: 'Nkosira Organic Farm',
     shortDesc: 'Full website for an organic farm in Samburu, Kenya.',
     mockupImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=400&q=80',
-    techs: ['JavaScript', 'PHP', 'MySQL', 'WordPress'],
-    liveUrl: '#',
-    githubUrl: '#',
+    techs: ['JavaScript', 'html', 'CSS'],
+    liveUrl: 'https://nkosiraorganicfarm.vercel.app/',
+    githubUrl: 'https://github.com/Kylexvin/nkosiraorganicfarm',
     caseStudy: {
       overview: 'A professional web presence for Nkosira Organic Farm, showcasing their products and farm story.',
       problem: 'The farm had no digital presence, losing potential customers and partnerships.',

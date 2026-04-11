@@ -2,26 +2,37 @@ import React, { useState } from 'react';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError('');
+    
     const form = e.target;
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('https://formspree.io/f/mqalydvo', {
+      // REPLACED with your unique FormSubmit hash
+      const response = await fetch('https://formsubmit.co/7584250f1f33226ebf2eb659adbed332', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
       });
+      
       if (response.ok) {
         form.reset();
         setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 5000);
       } else {
-        alert('Something went wrong. Try again.');
+        const data = await response.json();
+        setError(data.message || 'Something went wrong. Try again.');
       }
-    } catch {
-      alert('Error submitting form.');
+    } catch (err) {
+      setError('Network error. Please check your connection.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -58,10 +69,10 @@ const Contact = () => {
                 </div>
               </div>
               <div className="social-links">
-                <a href="#" className="social-link"><i className="fab fa-github"></i></a>
-                <a href="#" className="social-link"><i className="fab fa-linkedin-in"></i></a>
-                <a href="#" className="social-link"><i className="fab fa-twitter"></i></a>
-                <a href="#" className="social-link"><i className="fab fa-instagram"></i></a>
+                <a href="https://github.com/Kylexvin" className="social-link"><i className="fab fa-github"></i></a>
+                <a href="https://ke.linkedin.com/in/vinny-kylex-622890363" className="social-link"><i className="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/kylexvinny" className="social-link"><i className="fab fa-x"></i></a>
+                <a href="https://www.instagram.com/kylex_vin/" className="social-link"><i className="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -69,6 +80,10 @@ const Contact = () => {
             <div className="glass-card">
               <h3 className="sub-title">Send a Message</h3>
               <form id="contactForm" className="contact-form" onSubmit={handleSubmit}>
+                {/* FormSubmit hidden fields */}
+                <input type="hidden" name="_subject" value="New Contact Form Submission" />
+                <input type="hidden" name="_replyto" value="email" />
+                
                 <div className="form-group">
                   <input type="text" id="name" name="name" placeholder="Your Name" required />
                   <label htmlFor="name">Your Name</label>
@@ -85,13 +100,21 @@ const Contact = () => {
                   <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                   <label htmlFor="message">Your Message</label>
                 </div>
-                <button type="submit" className="cta-primary">
-                  <span>Send Message</span>
-                  <i className="fas fa-paper-plane"></i>
+                
+                <button type="submit" className="cta-primary" disabled={loading}>
+                  <span>{loading ? 'Sending...' : 'Send Message'}</span>
+                  <i className={`fas ${loading ? 'fa-spinner fa-pulse' : 'fa-paper-plane'}`}></i>
                 </button>
+                
+                {error && (
+                  <div style={{ marginTop: '1rem', color: '#ff4444', fontWeight: 'bold' }}>
+                    ❌ {error}
+                  </div>
+                )}
+                
                 {submitted && (
-                  <div style={{ marginTop: '1rem', color: 'green', fontWeight: 'bold' }}>
-                    Message sent successfully!
+                  <div style={{ marginTop: '1rem', color: '#00c851', fontWeight: 'bold' }}>
+                    ✓ Message sent successfully!
                   </div>
                 )}
               </form>

@@ -42,6 +42,7 @@ const Navbar = () => {
             <a href="#home" className="nav-link" onClick={(e) => handleNavClick(e, '#home')}>Home</a>
             <a href="#about" className="nav-link" onClick={(e) => handleNavClick(e, '#about')}>About</a>
             <a href="#experience" className="nav-link" onClick={(e) => handleNavClick(e, '#experience')}>Experience</a>
+            <a href="#projects" className="nav-link" onClick={(e) => handleNavClick(e, '#projects')}>Projects</a>
             <a href="#contact" className="nav-link" onClick={(e) => handleNavClick(e, '#contact')}>Contact</a>
           </div>
           <div

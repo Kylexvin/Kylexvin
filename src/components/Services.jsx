@@ -10,17 +10,12 @@ const Services = () => {
     <section id="projects" className="services-futuristic">
       <div className="container-futuristic">
         <div className="section-header-futuristic">
-          <div className="glitch-wrapper">
-            <h2 className="section-title-futuristic">
-              SERVICES
-            </h2>
-          </div>
-          <div className="cyber-line">
-            <span className="line"></span>
-            <span className="diamond">◆</span>
-            <span className="line"></span>
-          </div>
-          <p className="section-subtitle">[ TRANSFORMING IDEAS INTO DIGITAL REALITY ]</p>
+           <div className="section-header">
+          <h2 className="section-title">MY<span className="secondary-neon-text"> PROJECTS</span></h2>
+          <div className="header-line"></div>
+        </div>
+         
+         
         </div>
 
         <div className="services-folder-grid">
