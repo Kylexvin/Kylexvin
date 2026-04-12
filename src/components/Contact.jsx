@@ -14,7 +14,7 @@ const Contact = () => {
     const formData = new FormData(form);
 
     try {
-      // REPLACED with your unique FormSubmit hash
+      
       const response = await fetch('https://formsubmit.co/7584250f1f33226ebf2eb659adbed332', {
         method: 'POST',
         body: formData,
