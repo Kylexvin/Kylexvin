@@ -70,7 +70,7 @@ const Contact = () => {
               </div>
               <div className="social-links">
                 <a href="https://github.com/Kylexvin" className="social-link"><i className="fab fa-github"></i></a>
-                <a href="https://ke.linkedin.com/in/vinny-kylex-622890363" className="social-link"><i className="fab fa-linkedin-in"></i></a>
+                <a href="https://ke.linkedin.com/in/vincent-kipchirchir-622890363" className="social-link"><i className="fab fa-linkedin-in"></i></a>
                 <a href="https://x.com/kylexvinny" className="social-link"><i className="fab fa-x"></i></a>
                 <a href="https://www.instagram.com/kylex_vin/" className="social-link"><i className="fab fa-instagram"></i></a>
               </div>

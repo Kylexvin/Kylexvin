@@ -1,3 +1,4 @@
+//portfolio
 const projects = [
   // FULL STACK
   {
@@ -5,7 +6,7 @@ const projects = [
     category: 'fullstack',
     title: 'MoiHub Platform',
     shortDesc: 'Comprehensive campus super-app for Moi University students.',
-    mockupImage: '/lappy.jpg',
+    mockupImage: '/moihub.jpeg',
     techs: ['React ', 'Node.js', 'Express', 'MongoDB', 'Socket.io'],
     liveUrl: 'https://moihub-silk.vercel.app',
     githubUrl: 'https://github.com/kylexvin/moihub',
@@ -143,7 +144,7 @@ const projects = [
   category: 'client',
   title: 'Sagrema Foundation Website',
   shortDesc: 'Official website for a community foundation focused on social impact and development programs.',
-  mockupImage: '/sagrema.jpg',
+  mockupImage: '/sagrema.jpeg',
   techs: ['html', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
   liveUrl: 'https://sagremafoundation.org',
   githubUrl: 'https://github.com/Kylexvin/sagremafoundation',
@@ -168,71 +169,71 @@ const projects = [
     ]
   }
 },
-{
-  id: 'globe-givers-cbo',
-  category: 'client',
-  title: 'Globe Givers CBO Website',
-  shortDesc: 'Community-based organization website for outreach programs and local initiatives.',
-  mockupImage: '/globegivers.jpg',
-  techs: ['html', 'CSS', 'JavaScript', 'Vercel'],
-  liveUrl: 'https://globegivers.vercel.app/',
-  githubUrl: 'https://github.com/Kylexvin/globegivers',
-  caseStudy: {
-    overview: 'A professional website built for Globe Givers CBO to present their community programs, events, and outreach activities in a structured digital format.',
-    problem: 'The organization had no centralized platform to showcase their work, limiting visibility and donor engagement.',
-    solution: 'Built a simple, fast, and mobile-friendly React website focused on clarity, accessibility, and storytelling.',
-    features: [
-      '🏘️ Community program listings',
-      '📅 Events and outreach updates',
-      '📞 Contact and partnership section',
-      '📱 Mobile-first responsive design',
-      '⚡ Fast static deployment',
-    ],
-    achievements: [
-      'Improved credibility and online presence',
-      'Easy navigation for donors and partners',
-      'Lightweight and fast-loading website',
-    ],
-    challenges: [
-      { problem: 'Limited content and branding material', solution: 'Designed layout-first structure and adapted content visually' },
-    ]
-  }
-},
-  {
-    id: 'nkosira',
-    category: 'client',
-    title: 'Nkosira Organic Farm',
-    shortDesc: 'Full website for an organic farm in Samburu, Kenya.',
-    mockupImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=400&q=80',
-    techs: ['JavaScript', 'html', 'CSS'],
-    liveUrl: 'https://nkosiraorganicfarm.vercel.app/',
-    githubUrl: 'https://github.com/Kylexvin/nkosiraorganicfarm',
-    caseStudy: {
-      overview: 'A professional web presence for Nkosira Organic Farm, showcasing their products and farm story.',
-      problem: 'The farm had no digital presence, losing potential customers and partnerships.',
-      solution: 'Built a clean, fast WordPress site with custom PHP backend for product management.',
-      features: [
-        '🌿 Product showcase with gallery',
-        '📍 Farm location + contact info',
-        '📝 Blog for farm updates',
-        '📱 Fully mobile responsive',
-      ],
-      achievements: [
-        'Delivered in under 6 weeks',
-        'SEO optimized for local search',
-        'Client-managed via WordPress dashboard',
-      ],
-      challenges: [
-        { problem: 'Limited client technical knowledge', solution: 'Simple WordPress CMS for self-management' },
-      ]
-    }
-  },
+// {
+//   id: 'globe-givers-cbo',
+//   category: 'client',
+//   title: 'Globe Givers CBO Website',
+//   shortDesc: 'Community-based organization website for outreach programs and local initiatives.',
+//   mockupImage: '/globegivers.jpg',
+//   techs: ['html', 'CSS', 'JavaScript', 'Vercel'],
+//   liveUrl: 'https://globegivers.vercel.app/',
+//   githubUrl: 'https://github.com/Kylexvin/globegivers',
+//   caseStudy: {
+//     overview: 'A professional website built for Globe Givers CBO to present their community programs, events, and outreach activities in a structured digital format.',
+//     problem: 'The organization had no centralized platform to showcase their work, limiting visibility and donor engagement.',
+//     solution: 'Built a simple, fast, and mobile-friendly React website focused on clarity, accessibility, and storytelling.',
+//     features: [
+//       '🏘️ Community program listings',
+//       '📅 Events and outreach updates',
+//       '📞 Contact and partnership section',
+//       '📱 Mobile-first responsive design',
+//       '⚡ Fast static deployment',
+//     ],
+//     achievements: [
+//       'Improved credibility and online presence',
+//       'Easy navigation for donors and partners',
+//       'Lightweight and fast-loading website',
+//     ],
+//     challenges: [
+//       { problem: 'Limited content and branding material', solution: 'Designed layout-first structure and adapted content visually' },
+//     ]
+//   }
+// },
+//   {
+//     id: 'nkosira',
+//     category: 'client',
+//     title: 'Nkosira Organic Farm',
+//     shortDesc: 'Full website for an organic farm in Samburu, Kenya.',
+//     mockupImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=400&q=80',
+//     techs: ['JavaScript', 'html', 'CSS'],
+//     liveUrl: 'https://nkosiraorganicfarm.vercel.app/',
+//     githubUrl: 'https://github.com/Kylexvin/nkosiraorganicfarm',
+//     caseStudy: {
+//       overview: 'A professional web presence for Nkosira Organic Farm, showcasing their products and farm story.',
+//       problem: 'The farm had no digital presence, losing potential customers and partnerships.',
+//       solution: 'Built a clean, fast WordPress site with custom PHP backend for product management.',
+//       features: [
+//         '🌿 Product showcase with gallery',
+//         '📍 Farm location + contact info',
+//         '📝 Blog for farm updates',
+//         '📱 Fully mobile responsive',
+//       ],
+//       achievements: [
+//         'Delivered in under 6 weeks',
+//         'SEO optimized for local search',
+//         'Client-managed via WordPress dashboard',
+//       ],
+//       challenges: [
+//         { problem: 'Limited client technical knowledge', solution: 'Simple WordPress CMS for self-management' },
+//       ]
+//     }
+//   },
   {
     id: 'tujiinue',
     category: 'client',
     title: 'Tujiinue CBO',
     shortDesc: 'Multi-page React website for a community-based organization.',
-    mockupImage: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=400&q=80',
+    mockupImage: '/tujiinue.jpeg',
     techs: ['React', 'Framer Motion', 'React Router', 'Vercel'],
     liveUrl: '#',
     githubUrl: '#',
@@ -259,35 +260,35 @@ const projects = [
   },
 
   // DESIGN
-  {
-    id: 'kxbyte-brand',
-    category: 'design',
-    title: 'KXBYTE Branding',
-    shortDesc: 'Full brand identity for KXBYTE Digital Solutions.',
-    mockupImage: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=400&q=80',
-    techs: ['Illustrator', 'Photoshop', 'Brand Strategy'],
-    liveUrl: '#',
-    githubUrl: '#',
-    caseStudy: {
-      overview: 'Created the complete visual identity for KXBYTE Digital Solutions including logo, color palette, and brand guidelines.',
-      problem: 'Needed a strong brand that communicated technical expertise and modern innovation.',
-      solution: 'Developed a cyberpunk-inspired identity with clean typography and neon accent colors.',
-      features: [
-        '🎨 Logo design + variations',
-        '🎨 Color palette + typography',
-        '📐 Brand guidelines document',
-        '📱 Social media kit',
-      ],
-      achievements: [
-        'Consistent identity across all touchpoints',
-        'Memorable cyberpunk aesthetic',
-        'Scalable vector assets',
-      ],
-      challenges: [
-        { problem: 'Balancing tech feel with approachability', solution: 'Clean layout with selective neon accents' },
-      ]
-    }
-  },
+  // {
+  //   id: 'kxbyte-brand',
+  //   category: 'design',
+  //   title: 'KXBYTE Branding',
+  //   shortDesc: 'Full brand identity for KXBYTE Digital Solutions.',
+  //   mockupImage: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=400&q=80',
+  //   techs: ['Illustrator', 'Photoshop', 'Brand Strategy'],
+  //   liveUrl: '#',
+  //   githubUrl: '#',
+  //   caseStudy: {
+  //     overview: 'Created the complete visual identity for KXBYTE Digital Solutions including logo, color palette, and brand guidelines.',
+  //     problem: 'Needed a strong brand that communicated technical expertise and modern innovation.',
+  //     solution: 'Developed a cyberpunk-inspired identity with clean typography and neon accent colors.',
+  //     features: [
+  //       '🎨 Logo design + variations',
+  //       '🎨 Color palette + typography',
+  //       '📐 Brand guidelines document',
+  //       '📱 Social media kit',
+  //     ],
+  //     achievements: [
+  //       'Consistent identity across all touchpoints',
+  //       'Memorable cyberpunk aesthetic',
+  //       'Scalable vector assets',
+  //     ],
+  //     challenges: [
+  //       { problem: 'Balancing tech feel with approachability', solution: 'Clean layout with selective neon accents' },
+  //     ]
+  //   }
+  // },
 ];
 
 export const categories = [
@@ -310,15 +311,15 @@ export const categories = [
     label: 'Client Work',
     icon: 'fas fa-briefcase',
     description: 'Real-world websites and apps built for clients.',
-    mockupImage: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=600&q=80',
+    mockupImage: '/client.webp',
   },
-  {
-    id: 'design',
-    label: 'Design & Branding',
-    icon: 'fas fa-paint-brush',
-    description: 'Brand identities, logos, and visual design work.',
-    mockupImage: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=600&q=80',
-  },
+  // {
+  //   id: 'design',
+  //   label: 'Design & Branding',
+  //   icon: 'fas fa-paint-brush',
+  //   description: 'Brand identities, logos, and visual design work.',
+  //   mockupImage: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=600&q=80',
+  // },
 ];
 
 export default projects;
