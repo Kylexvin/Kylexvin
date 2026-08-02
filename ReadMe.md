@@ -70,8 +70,6 @@ I enjoy building systems that solve real problems, optimizing performance, integ
   <img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api?username=kylexvin&show_icons=true&theme=tokyonight&title_color=2ea043&icon_color=2ea043&hide_border=true&bg_color=00000000&count_private=true" alt="stats" />
   <img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api/top-langs/?username=kylexvin&layout=compact&theme=tokyonight&title_color=2ea043&icon_color=2ea043&hide_border=true&bg_color=00000000&langs_count=8" alt="top langs" />
 </p>
-![](https://streak-stats.demolab.com/?user=kylexvin&theme=dark&hide_border=false)<br/>
-
 
 ### 📈 Contribution Graph
 
@@ -86,6 +84,13 @@ I enjoy building systems that solve real problems, optimizing performance, integ
 </p>
 
 
+# 📊 GitHub Stats:
+![](https://github-readme-stats.shion.dev/api?username=kylexvin&theme=dark&hide_border=false&include_all_commits=true&count_private=false)<br/>
+![](https://streak-stats.demolab.com/?user=kylexvin&theme=dark&hide_border=false)<br/>
+![](https://github-readme-stats.shion.dev/api/top-langs/?username=kylexvin&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
 
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
-
+---
+<p align="center"><i>⭐️ From <a href="https://github.com/kylexvin">kylexvin</a></i></p>
