@@ -71,20 +71,11 @@ I enjoy building systems that solve real problems, optimizing performance, integ
   <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=kylexvin&bg_color=00000000&color=2ea043&line=2ea043&point=c9d1d9&area=true&hide_border=true" alt="activity graph" />
 </p>
 
-### 💭 Dev Quote
-
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev quote" />
-</p>
 
 
 # 📊 GitHub Stats:
 
-![](https://streak-stats.demolab.com/?user=kylexvin&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=kylexvin&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
+![](https://streak-stats.demolab.com/?user=kylexvin&theme=dark&hide_border=false)
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
----
 <p align="center"><i>⭐️ From <a href="https://github.com/kylexvin">kylexvin</a></i></p>
