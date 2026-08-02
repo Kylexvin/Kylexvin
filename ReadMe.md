@@ -64,12 +64,6 @@ I enjoy building systems that solve real problems, optimizing performance, integ
   <a href="https://kxbyte-tech.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
 </p>
 
-### 📊 GitHub Stats
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api?username=kylexvin&show_icons=true&theme=tokyonight&title_color=2ea043&icon_color=2ea043&hide_border=true&bg_color=00000000&count_private=true" alt="stats" />
-  <img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api/top-langs/?username=kylexvin&layout=compact&theme=tokyonight&title_color=2ea043&icon_color=2ea043&hide_border=true&bg_color=00000000&langs_count=8" alt="top langs" />
-</p>
 
 ### 📈 Contribution Graph
 
@@ -85,7 +79,7 @@ I enjoy building systems that solve real problems, optimizing performance, integ
 
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.shion.dev/api?username=kylexvin&theme=dark&hide_border=false&include_all_commits=true&count_private=false)<br/>
+
 ![](https://streak-stats.demolab.com/?user=kylexvin&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.shion.dev/api/top-langs/?username=kylexvin&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
 
