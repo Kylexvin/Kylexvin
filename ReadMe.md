@@ -77,5 +77,11 @@ I enjoy building systems that solve real problems, optimizing performance, integ
 
 ![](https://streak-stats.demolab.com/?user=kylexvin&theme=dark&hide_border=false)
 
+![GitHub Streak](https://streak-stats.demolab.com/?user=kylexvin&theme=dark)
+
+![GitHub Streak](https://streak-stats.demolab.com/?user=kylexvin&theme=radical)
+
+![GitHub Streak](https://streak-stats.demolab.com/?user=kylexvin&theme=tokyonight)
+
 
 <p align="center"><i>⭐️ From <a href="https://github.com/kylexvin">kylexvin</a></i></p>
