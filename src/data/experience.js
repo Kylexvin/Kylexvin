@@ -42,6 +42,7 @@ const experiences = [
       'Developed and maintained the company website, integrating responsive UI, backend functionality, and content management to improve the organization\'s online presence.',
     techs: ['JavaScript', 'PHP', 'MySQL', 'WordPress']
   },
+  
   {
     id: 4,
     period: 'Sep 2023 - Dec 2023',
