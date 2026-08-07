@@ -71,17 +71,14 @@ I enjoy building systems that solve real problems, optimizing performance, integ
 
 ### 🔗 Connect With Me
 
-### Connect With Me
 
 <p align="center">
-  <a href="YOUR_LINKEDIN_URL">
+  <a href="www.linkedin.com/in/vinny-kylex-622890363">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="YOUR_GITHUB_URL">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="YOUR_X_URL">
-    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" />
+
+  <a href="https://www.instagram.com/kylex_vin">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
   </a>
 </p>
 <!-- <p align="left">
@@ -91,7 +88,7 @@ I enjoy building systems that solve real problems, optimizing performance, integ
 </p> -->
 
 
-### 📈 Contribution Graph
+<!-- ### 📈 Contribution Graph -->
 
 <p align="center">
   <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=kylexvin&bg_color=00000000&color=2ea043&line=2ea043&point=c9d1d9&area=true&hide_border=true" alt="activity graph" />
