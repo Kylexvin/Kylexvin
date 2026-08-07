@@ -7,7 +7,9 @@
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Caveat&weight=600&size=26&pause=1000&color=ff7b72&center=true&vCenter=true&width=360&height=44&lines=KXbyte%20%26%20moihub%20CEO;On%20God!" alt="Typing headlines" />
 </p>
-
+<div>
+![GitHub Streak](https://v0-git-hub-streak-score-card-phi.vercel.app/api/card-with-avatar?username=Kylexvin&theme=%7B%22backgroundColor%22%3A%22%231a1b27%22%2C%22textColor%22%3A%22%23ffffff%22%2C%22accentColor%22%3A%22%2300d4aa%22%2C%22borderColor%22%3A%22%2330363d%22%2C%22waterColor%22%3A%22%2300d4aa%22%2C%22streakColor%22%3A%22%23ff6b6b%22%7D)
+</div>
 ### 🚀 About Me
 
 I’m a MERN stack developer focused on building scalable web and mobile applications. I work heavily with MongoDB, Express, React, React Native, and Node.js — building full-stack systems from architecture to deployment.  
