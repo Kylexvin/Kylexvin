@@ -27,7 +27,13 @@ I enjoy building systems that solve real problems, optimizing performance, integ
 
 ### 🛠️ Tech Stack
 
-<p align="left">
+<!-- tech stack icons -->
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,github,js,ts,react,nextjs,reactnative,nodejs,express,mongodb,postgres,redis,tailwind,firebase&perline=14">
+  </a>
+</p>
+<!-- <p align="left">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
@@ -60,7 +66,7 @@ I enjoy building systems that solve real problems, optimizing performance, integ
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
   <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=vscodium&logoColor=white" alt="VS Code" />
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
-</p>
+</p> -->
 
 ### 🔗 Connect With Me
 
