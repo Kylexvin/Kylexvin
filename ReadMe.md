@@ -74,9 +74,6 @@ I enjoy building systems that solve real problems, optimizing performance, integ
 
 
 # 📊 GitHub Stats:
-
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=kylexvin&theme=nightowl&card_width=800&card_height=230)](https://git.io/streak-stats)
-![GitHub Streak](https://streak-stats.demolab.com/?user=kylexvin&theme=tokyonight)
-
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=kylexvin&theme=nightowl&card_width=830&card_height=230)](https://git.io/streak-stats)
 
 <p align="center"><i>⭐️ From <a href="https://github.com/kylexvin">kylexvin</a></i></p>
