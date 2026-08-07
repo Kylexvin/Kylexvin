@@ -28,9 +28,10 @@ I enjoy building systems that solve real problems, optimizing performance, integ
 ### 🛠️ Tech Stack
 
 <!-- tech stack icons -->
+<!-- tech stack icons -->
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,github,js,ts,react,nextjs,reactnative,nodejs,express,mongodb,postgres,redis,tailwind,firebase&perline=14">
+    <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,postgres,redis,tailwind,firebase,docker&perline=14">
   </a>
 </p>
 <!-- <p align="left">
